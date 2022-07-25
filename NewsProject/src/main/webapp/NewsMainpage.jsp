@@ -11,17 +11,18 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 	<style>
-		header{
+		#header_login{
 		  position: fixed;
 		  top: 0;
 		  left: 0;
 		  right: 0;
 		  height: 100px;
 		  padding: 1rem;
-		  background: red;
-		  color: balck;
 		  font-weight: bold;
 		  display: flex;
+		  align-items: center;
+		  flex-direction: row-reverse;
+		  text-decoration:none !important;
 		}
 		
 		footer{
@@ -38,9 +39,13 @@
 	</style>
 </head>
 <body class="is-preload">
-		<header>
-		
-		sf;lsfd;lfds;klfds;lkfsad;kfsda;lkfsd;klfsd;kl
+		<header id="header_login">
+		<!-- 로그인 아이콘 -->
+		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
+		<a href="#" data-position="center" id="login_logo"><img src="images/loginicon.png" alt="" width="80px" height="80px" /></a>
+		<!-- 검색 아이콘 -->
+		<a href="#" data-position="center" id="search_logo"><img src="images/searchicon.png" alt="" width="80px" height="80px" /></a>
+		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
 		</header>
 		<section>
 		<!-- Page Wrapper -->
