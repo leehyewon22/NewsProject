@@ -9,9 +9,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	<style>
+		header{
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100px;
+		  padding: 1rem;
+		  background: red;
+		  color: balck;
+		  font-weight: bold;
+		  display: flex;
+		}
+		
+		footer{
+		  position: fixed;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  height: 100px;
+		  padding: 1rem;
+		  background: red;
+		  font-weight: bold;
+		  display: flex;
+		}
+	</style>
 </head>
 <body class="is-preload">
+		<header>
 		
+		sf;lsfd;lfds;klfds;lkfsad;kfsda;lkfsd;klfsd;kl
+		</header>
+		<section>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 				<!-- Wrapper -->
@@ -111,6 +142,9 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
-
+</section>
+<footer>
+	slfjslfajs;dfajs;dlfjas;lfajs;l
+</footer>
 	</body>
 </html>
