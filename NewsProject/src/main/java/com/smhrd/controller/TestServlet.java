@@ -13,6 +13,7 @@ public class TestServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// test servlet 생성
+		System.out.println("hello");
 	}
 
 }
