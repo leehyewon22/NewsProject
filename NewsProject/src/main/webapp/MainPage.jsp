@@ -11,6 +11,11 @@
     <title>MAINPAGE</title>
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <style>
+	    body{
+	    	
+	    	background: linear-gradient(360deg, rgba(172,203,238,1) 0%, rgba(231,240,253,1) 100%);
+	    }
+	    
         header{
 		  position: fixed;
 		  top: 0;
@@ -27,9 +32,9 @@
 		
 		nav{
 			height: 100px;
-			margin-top: 130px;
+			margin-top: 80px;
  			text-align: center;
- 			padding: 60px 0 0 0;
+ 			padding: 50px 0 0 0;
  			font-weight: bold;
  			font-size: 30px;
  			word-spacing: 1.2em;
@@ -43,6 +48,13 @@
 
 		section{
 			  padding: 1rem;
+		}
+		
+		footer{
+			text-align : center;
+			height: 65px;
+			padding: 1rem;
+			
 		}
         .slick-arrow{
             position: absolute; top:100%; transform: translateY(-10%);
@@ -69,15 +81,15 @@
         
         .mainSlide img{
             width: 500px;
-            height: 500px;
+            height: 600px;
         }
         
         #main_keyword{
 		  	width: 100%;
-            height: 600px;
+            height: 697px;
             left: 0;
 		    right: 0;
-            background : gray;
+            background: linear-gradient(90deg, rgba(137,207,240,1) 0%, rgba(108,180,238,1) 50%, rgba(0,127,255,1) 100%);
             display : none;
         }
         
@@ -87,9 +99,11 @@
 	    function keyword(){
 	        if($('.mainSlide').css('display') !== 'none'){
 		        $('.mainSlide').hide();
+		        $('footer').hide();
 		        $('#main_keyword').show();
 		    }else{
 		    	$('.mainSlide').hide();
+		    	$('footer').hide();
 		    }
 	    }
 
@@ -97,6 +111,7 @@
 	    function categorys(){
 	        if($('.mainSlide').css('display') == 'none'){
 		        $('.mainSlide').show();
+		        $('footer').show();		        
 		        $('#main_keyword').hide();
 		    }else{
 		        $('#main_keyword').hide();
@@ -113,7 +128,7 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1000,
             dots:true
             });
         })
@@ -142,18 +157,28 @@
 
 	 <section class="panel">
 	    <div class="mainSlide">
-	        <div><img src="images/pic01.jpg"></div>
-	        <div><img src="images/pic02.jpg"></div>
-	        <div><img src="images/pic03.jpg"></div>
-	        <div><img src="images/pic01.jpg"></div>
-	        <div><img src="images/pic02.jpg"></div>
-	        <div><img src="images/pic03.jpg"></div>
+	        <div><img src="images/pic_01.jpg"></div>
+	        <div><img src="images/pic_02.jpg"></div>
+	        <div><img src="images/pic_03.jpg"></div>
+	        <div><img src="images/pic_04.jpg"></div>
+	        <div><img src="images/pic_05.jpg"></div>
+	        <div><img src="images/pic_01.jpg"></div>
+	        <div><img src="images/pic_02.jpg"></div>
+	        <div><img src="images/pic_03.jpg"></div>
+	        <div><img src="images/pic_04.jpg"></div>
+	        <div><img src="images/pic_05.jpg"></div>
+	        
 	    </div>
 	    	<div id="main_keyword">
 	    
 	   	  	</div>
 	    </section>
-
+		
+		<footer>
+			<!-- left, right 버튼 여기에 만들어 주세요 -->
+			
+			버튼 
+		</footer>
 
 
     <script type="text/javascript">
@@ -194,7 +219,5 @@
         // ]]>
         
     </script>
-   
-  
 </body>
 </html>
