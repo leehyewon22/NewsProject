@@ -4,9 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Loginpage</title>
+	<style>
+		.text{
+		  display: inline; 
+		  vertical-align: middle;
+		  border-right: .05em solid black;
+		  animation:  cursor 0.2s ease infinite;
+		}
+	</style>
+	 
 </head>
 <body>
-	d
+	<div class="intro">
+	   <h1 class="text"></h1>
+	</div>
+<script src="assets/js/login.js"></script>
 </body>
 </html>

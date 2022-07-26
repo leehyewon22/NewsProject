@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬릭슬라이더활용</title>
+    <title>MAINPAGE</title>
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <style>
         header{
@@ -22,23 +22,43 @@
 		  display: flex;
 		  align-items: center;
 		  flex-direction: row-reverse;
-		  text-decoration:none !important;
+		  word-spacing: 1.2em;
 		}
-        section{
-            margin-top: 150px;
+		
+		nav{
+			height: 100px;
+			margin-top: 130px;
+ 			text-align: center;
+ 			padding: 60px 0 0 0;
+ 			font-weight: bold;
+ 			font-size: 30px;
+ 			word-spacing: 1.2em;
+ 			text-decoration:none !important;
         }
+        
+        a{
+        	color : black;
+        	text-decoration:none !important;
+        }
+
+		section{
+			  padding: 1rem;
+		}
         .slick-arrow{
             position: absolute; top:100%; transform: translateY(-10%);
             /*margin-left: 500px;*/
             width: 100px; height: 100px;
             border: none;
-            /*text-indent: -9999px;
-            overflow: hidden;*/
+/*             text-indent: -9999px; */
+            /* overflow: hidden; */
         }
-        .slick-prev{z-index: 100;left:40%;
+
+         
+/*         .slick-prev{z-index: 100;left:40%;
             background:url(img/btn1_prev.png) no-repeat 0 0;}
         .slick-next{right:40%;
-            background:url(img/btn1_next.png) no-repeat 0 0;}
+            background:url(img/btn1_next.png) no-repeat 0 0;}  */
+            
         .slick-dots{position: absolute; bottom:10px;left:50%; transform: translatex(-50%);}
         .slick-dots li{float: left; list-style: none;}
         .slick-dots li button{background: url(img/navi_dot2.png) no-repeat 0 0;
@@ -50,6 +70,8 @@
             width: 500px;
             height: 500px;
         }
+        
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></s> -->
@@ -67,35 +89,37 @@
     </script>
 </head>
 <body>
+	
     <header id="header_login">
 		<!-- 로그인 아이콘 -->
 		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
-		<a href="#" data-position="center" id="login_logo"><img src="images/loginicon.png" alt="" width="80px" height="80px" /></a>
+		<a href="Login.jsp" data-position="center" id="login_logo">로그인<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- 검색 아이콘 -->
-		<a href="#" data-position="center" id="search_logo"><img src="images/searchicon.png" alt="" width="80px" height="80px" /></a>
+		<a href="Login.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
 	</header>
 
-
-<div id="aa">
-
-    <section class="panel">
-    <div class="mainSlide">
-        <div><img src="images/pic01.jpg"></div>
-        <div><img src="images/pic02.jpg"></div>
-        <div><img src="images/pic03.jpg"></div>
-        <div><img src="images/pic01.jpg"></div>
-        <div><img src="images/pic02.jpg"></div>
-        <div><img src="images/pic03.jpg"></div>
-    </div>
-    
-    </section>
-</div>
+	<nav>
+		<div>	
+		<a href="#" id="category_new"><b>실시간키워드</b></a>
+		<a href="#" id="category_1"><b>카테고리1</b></a>
+		<a href="#" id="category_2"><b>카테고리1</b></a>
+		<a href="#" id="category_3"><b>카테고리1</b></a>
+		</div>
+	</nav>
 
 
-
-
-    
+	 <section class="panel">
+	    <div class="mainSlide">
+	        <div><img src="images/pic01.jpg"></div>
+	        <div><img src="images/pic02.jpg"></div>
+	        <div><img src="images/pic03.jpg"></div>
+	        <div><img src="images/pic01.jpg"></div>
+	        <div><img src="images/pic02.jpg"></div>
+	        <div><img src="images/pic03.jpg"></div>
+	    </div>
+	    
+	    </section>
 
     <script type="text/javascript">
         // <![CDATA[  <-- For SVG support
@@ -134,7 +158,6 @@
         }
         // ]]>
     </script>
-    <script src="/main.js"></script>
-
+  
 </body>
 </html>
