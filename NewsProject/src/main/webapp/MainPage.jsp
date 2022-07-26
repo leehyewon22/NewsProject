@@ -141,7 +141,7 @@
 		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
 		<a href="Login.jsp" data-position="center" id="login_logo">로그인<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- 검색 아이콘 -->
-		<a href="Login.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" hspace="15" alt="" width="30px" height="30px" /></a>
+		<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
 	</header>
 
