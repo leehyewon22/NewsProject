@@ -49,8 +49,8 @@
             /*margin-left: 500px;*/
             width: 100px; height: 100px;
             border: none;
-/*             text-indent: -9999px; */
-            /* overflow: hidden; */
+            text-indent: -9999px; 
+            /* overflow: hidden;  */
         }
 
          
@@ -66,13 +66,44 @@
             margin: 0 10px;
             }
         .slick-dots .slick-active button{background: url(img/navi_dot_on.png) no-repeat 0 0;}
+        
         .mainSlide img{
             width: 500px;
             height: 500px;
         }
         
+        #main_keyword{
+		  	width: 100%;
+            height: 600px;
+            left: 0;
+		    right: 0;
+            background : gray;
+            display : none;
+        }
         
     </style>
+    
+    <script>
+	    function keyword(){
+	        if($('.mainSlide').css('display') !== 'none'){
+		        $('.mainSlide').hide();
+		        $('#main_keyword').show();
+		    }else{
+		    	$('.mainSlide').hide();
+		    }
+	    }
+
+	    
+	    function categorys(){
+	        if($('.mainSlide').css('display') == 'none'){
+		        $('.mainSlide').show();
+		        $('#main_keyword').hide();
+		    }else{
+		        $('#main_keyword').hide();
+		    }
+	    } 
+	    
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></s> -->
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -101,10 +132,10 @@
 
 	<nav>
 		<div>	
-		<a href="#" id="category_new"><b>실시간키워드</b></a>
-		<a href="#" id="category_1"><b>카테고리1</b></a>
-		<a href="#" id="category_2"><b>카테고리1</b></a>
-		<a href="#" id="category_3"><b>카테고리1</b></a>
+		<a href="#main_keyword" id="category_new" onclick="keyword()"><b>실시간키워드</b></a>
+		<a href="#" id="category_1" onclick="categorys()"><b>카테고리1</b></a>
+		<a href="#" id="category_2" onclick="categorys()"><b>카테고리2</b></a>
+		<a href="#" id="category_3" onclick="categorys()"><b>카테고리3</b></a>
 		</div>
 	</nav>
 
@@ -118,8 +149,12 @@
 	        <div><img src="images/pic02.jpg"></div>
 	        <div><img src="images/pic03.jpg"></div>
 	    </div>
+	    	<div id="main_keyword">
 	    
+	   	  	</div>
 	    </section>
+
+
 
     <script type="text/javascript">
         // <![CDATA[  <-- For SVG support
@@ -157,7 +192,9 @@
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
         // ]]>
+        
     </script>
+   
   
 </body>
 </html>
