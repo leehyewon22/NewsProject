@@ -23,6 +23,13 @@
 		  align-items: center;
 		  flex-direction: row-reverse;
 		  word-spacing: 1.2em;
+		  letter-spacing: 3px;
+		}
+	
+		#header_login img{
+			width:30px; 
+			height: 30px;
+			margin: 0 15px 0 10px;
 		}
 		nav{
 			height: 100px;
@@ -45,6 +52,7 @@
             background: linear-gradient(90deg, rgba(137,207,240,1) 0%, rgba(108,180,238,1) 50%, rgba(0,127,255,1) 100%);
             display : none;
         }
+	
     </style>
 </head>
 <body>
@@ -60,9 +68,9 @@
 	<header id="header_login">
 		<!-- 로그인 아이콘 -->
 		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
-		<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
+		<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" alt="" /></a>
 		<!-- 검색 아이콘 -->
-		<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" hspace="15" alt="" width="30px" height="30px" /></a>
+		<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" alt="" /></a>
 		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
 	</header>
 
