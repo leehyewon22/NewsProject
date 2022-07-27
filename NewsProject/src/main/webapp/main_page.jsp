@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -47,11 +48,19 @@
     </style>
 </head>
 <body>
+	<%
+		//session 값 가지고 오기
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		
+		// 메인페이지에서 세션이 필요한 것들??
+			
+	
+	%>
 
 	<header id="header_login">
 		<!-- 로그인 아이콘 -->
 		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
-		<a href="Login.jsp" data-position="center" id="login_logo">로그인<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
+		<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- 검색 아이콘 -->
 		<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" hspace="15" alt="" width="30px" height="30px" /></a>
 		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->

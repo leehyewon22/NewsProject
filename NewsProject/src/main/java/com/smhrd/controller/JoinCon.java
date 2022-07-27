@@ -49,7 +49,6 @@ public class JoinCon extends HttpServlet {
 		}
 	
 		
-		
 	}
 	
 	

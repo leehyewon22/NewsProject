@@ -15,9 +15,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- resultType="" -> select문에서 조회를 통해 어떤 타입을 가져오는지 알려주는거임 -->
 	<select id="selectMember" parameterType="com.smhrd.model.Member" resultType="com.smhrd.model.Member">
-		select * from web_member where email=#{email} and pw=#{pw}
-		<!-- id=#{id(->필드이름)} and pw=#{pw(->필드이름)}
-			-> id와 pw가 vo객체 안의 id,pw와 동일해야~ 라는 의미 -->
+		select * from user_info where mem_id=#{id} and mem_pw=#{pw}
 	</select>
 	
 	

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loginpage</title>
-<link rel = "stylesheet" href="p2.css">
-<script src="jquery-3.4.1.js"></script>
+<link rel = "stylesheet" href="#">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <style>
     @import url('https://fonts.google.com/share?selection.family=Noto%20Sans%20KR:wght@100');
 		* {margin: 0; padding: 0; box-sizing: border-box;}
@@ -18,7 +20,7 @@
 		    justify-content: center;
 		    align-items: center;
 		    height: 100vh;
-		    background: url('bg03.jpg') no-repeat center;
+		    background: url('./images/bg.jpg') no-repeat center;
 		    background-size: cover;
 		}
 		body::before{
@@ -77,7 +79,7 @@
 <body>
     <section class="login-form">
         <h1>OO님 환영합니다!</h1>
-        <form action="">
+        <form action="LoginCon" method="post">
             <div class="int-area">
                 <input type="text" name="id" id="id"
                 autocomplete="off" >
@@ -92,15 +94,16 @@
 			<table width="400px">
 				<tr>
 					<td>
-		                <button type="submit">로그인</button>
+		                <a href="main_page.jsp"><button type="submit" >로그인</button></a>
 		            </td>
+		             
 		            <td>
-		                <button onclick="location.href='Join.jsp' ">회원가입</button>
+		                <button type="button" onclick="location.href='Join.jsp'">회원가입</button>
 		            </td>
 		        </tr>
 			</table>
             </div>
-        </form>
+       </form>
         <div class="caption">
             <a href="">Forgot Password?</a>
         </div>
