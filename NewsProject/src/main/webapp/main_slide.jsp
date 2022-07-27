@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>슬라이드</title>
-<link href="main_slide.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/main_slide.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
