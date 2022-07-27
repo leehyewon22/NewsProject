@@ -1,21 +1,16 @@
+<%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
-
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAINPAGE</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <style>
-	    body{
-	    	
-	    	background: linear-gradient(360deg, rgba(172,203,238,1) 0%, rgba(231,240,253,1) 100%);
-	    }
-	    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link href="./assets/css/main_slide.css" rel="stylesheet" type="text/css">
+<title>MAINPAGE</title>
+	<style>
+	    body{background: linear-gradient(360deg, rgba(172,203,238,1) 0%, rgba(231,240,253,1) 100%);}
         header{
 		  position: fixed;
 		  top: 0;
@@ -29,7 +24,6 @@
 		  flex-direction: row-reverse;
 		  word-spacing: 1.2em;
 		}
-		
 		nav{
 			height: 100px;
 			margin-top: 80px;
@@ -40,50 +34,9 @@
  			word-spacing: 1.2em;
  			text-decoration:none !important;
         }
-        
-        a{
-        	color : black;
-        	text-decoration:none !important;
-        }
-
-		section{
-			  padding: 1rem;
-		}
-		
-		footer{
-			text-align : center;
-			height: 65px;
-			padding: 1rem;
-			
-		}
-        .slick-arrow{
-            position: absolute; top:100%; transform: translateY(-10%);
-            /*margin-left: 500px;*/
-            width: 100px; height: 100px;
-            border: none;
-            text-indent: -9999px; 
-            /* overflow: hidden;  */
-        }
-
-         
-/*         .slick-prev{z-index: 100;left:40%;
-            background:url(img/btn1_prev.png) no-repeat 0 0;}
-        .slick-next{right:40%;
-            background:url(img/btn1_next.png) no-repeat 0 0;}  */
-            
-        .slick-dots{position: absolute; bottom:10px;left:50%; transform: translatex(-50%);}
-        .slick-dots li{float: left; list-style: none;}
-        .slick-dots li button{background: url(img/navi_dot2.png) no-repeat 0 0;
-            border: none;
-            margin: 0 10px;
-            }
-        .slick-dots .slick-active button{background: url(img/navi_dot_on.png) no-repeat 0 0;}
-        
-        .mainSlide img{
-            width: 500px;
-            height: 600px;
-        }
-        
+        a{color : black;text-decoration:none !important;}
+		section{padding: 0.1rem;}
+        .mainSlide img{width: 550px;height: 600px;}
         #main_keyword{
 		  	width: 100%;
             height: 697px;
@@ -92,51 +45,19 @@
             background: linear-gradient(90deg, rgba(137,207,240,1) 0%, rgba(108,180,238,1) 50%, rgba(0,127,255,1) 100%);
             display : none;
         }
-        
     </style>
-    
-    <script>
-	    function keyword(){
-	        if($('.mainSlide').css('display') !== 'none'){
-		        $('.mainSlide').hide();
-		        $('footer').hide();
-		        $('#main_keyword').show();
-		    }else{
-		    	$('.mainSlide').hide();
-		    	$('footer').hide();
-		    }
-	    }
-
-	    
-	    function categorys(){
-	        if($('.mainSlide').css('display') == 'none'){
-		        $('.mainSlide').show();
-		        $('footer').show();		        
-		        $('#main_keyword').hide();
-		    }else{
-		        $('#main_keyword').hide();
-		    }
-	    } 
-	    
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></s> -->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(function(){
-            $('.mainSlide').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            dots:true
-            });
-        })
-    </script>
 </head>
 <body>
+	<%
+		//session 값 가지고 오기
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		
+		// 메인페이지에서 세션이 필요한 것들??
+			
 	
-    <header id="header_login">
+	%>
+
+	<header id="header_login">
 		<!-- 로그인 아이콘 -->
 		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
 		<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" hspace="15" alt="" width="30px" height="30px" /></a>
@@ -153,71 +74,191 @@
 		<a href="#" id="category_3" onclick="categorys()"><b>카테고리3</b></a>
 		</div>
 	</nav>
-
-
-	 <section class="panel">
-	    <div class="mainSlide">
-	        <div><img src="images/pic_01.jpg"></div>
-	        <div><img src="images/pic_02.jpg"></div>
-	        <div><img src="images/pic_03.jpg"></div>
-	        <div><img src="images/pic_04.jpg"></div>
-	        <div><img src="images/pic_05.jpg"></div>
-	        <div><img src="images/pic_01.jpg"></div>
-	        <div><img src="images/pic_02.jpg"></div>
-	        <div><img src="images/pic_03.jpg"></div>
-	        <div><img src="images/pic_04.jpg"></div>
-	        <div><img src="images/pic_05.jpg"></div>
-	        
-	    </div>
-	    	<div id="main_keyword">
-	    
-	   	  	</div>
-	    </section>
+	
+	<section>
+		<div class="section">
+			<input type="radio" name="slide" id="slide01" checked>
+			<input type="radio" name="slide" id="slide02">
+			<input type="radio" name="slide" id="slide03">
+			<input type="radio" name="slide" id="slide04">
+			<input type="radio" name="slide" id="slide05">
+			<input type="radio" name="slide" id="slide06">
+			<input type="radio" name="slide" id="slide07">
+			<input type="radio" name="slide" id="slide08">
+			<input type="radio" name="slide" id="slide09">
+			<input type="radio" name="slide" id="slide10">
 		
-		<footer>
-			<!-- left, right 버튼 여기에 만들어 주세요 -->
+			<div class="slidewrap">
+				
+				<ul class="slidelist">
+					<!-- 슬라이드 영역 -->
+					<li class="slideitem">
+						<a>
+							<div class="textbox">
+								<h3>1번째 슬라이드</h3>
+								<p>1번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_01.jpg">
+						</a>
+					</li>
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>2번째 슬라이드</h3>
+								<p>2번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_02.jpg">
+						</a>
+					</li>
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>3번째 슬라이드</h3>
+								<p>3번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_03.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>4번째 슬라이드</h3>
+								<p>4번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_04.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>5번째 슬라이드</h3>
+								<p>5번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_05.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>6번째 슬라이드</h3>
+								<p>6번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_01.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>7번째 슬라이드</h3>
+								<p>7번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_02.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>8번째 슬라이드</h3>
+								<p>8번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_03.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>9번째 슬라이드</h3>
+								<p>9번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_04.jpg">
+						</a>
+					</li class="slideitem">
+					<li class="slideitem">
+						<a>
+							
+							<div class="textbox">
+								<h3>10번째 슬라이드</h3>
+								<p>10번째 슬라이드 입니다.</p>
+							</div>
+							<img src="images/pic_05.jpg">
+						</a>
+					</li class="slideitem">
+		
+					<!-- 좌,우 슬라이드 버튼 -->
+					<div class="slide-control">
+						<div class="control01">
+							<label for="slide10" class="left"></label>
+							<label for="slide02" class="right"></label>
+						</div>
+						<div class="control02">
+							<label for="slide01" class="left"></label>
+							<label for="slide03" class="right"></label>
+						</div>
+						<div class="control03">
+							<label for="slide02" class="left"></label>
+							<label for="slide04" class="right"></label>
+						</div>
+						<div class="control04">
+							<label for="slide03" class="left"></label>
+							<label for="slide05" class="right"></label>
+						</div>
+						<div class="control05">
+							<label for="slide04" class="left"></label>
+							<label for="slide06" class="right"></label>
+						</div>
+						<div class="control06">
+							<label for="slide05" class="left"></label>
+							<label for="slide07" class="right"></label>
+						</div>
+						<div class="control07">
+							<label for="slide06" class="left"></label>
+							<label for="slide08" class="right"></label>
+						</div>
+						<div class="control08">
+							<label for="slide07" class="left"></label>
+							<label for="slide09" class="right"></label>
+						</div>
+						<div class="control09">
+							<label for="slide08" class="left"></label>
+							<label for="slide10" class="right"></label>
+						</div>
+						<div class="control10">
+							<label for="slide09" class="left"></label>
+							<label for="slide01" class="right"></label>
+						</div>
+					</div>
+		
+				</ul>
+				<!-- 페이징 -->
+				<ul class="slide-pagelist">
+					<li><label for="slide01"></label></li>
+					<li><label for="slide02"></label></li>
+					<li><label for="slide03"></label></li>
+					<li><label for="slide04"></label></li>
+					<li><label for="slide05"></label></li>
+					<li><label for="slide06"></label></li>
+					<li><label for="slide07"></label></li>
+					<li><label for="slide08"></label></li>
+					<li><label for="slide09"></label></li>
+					<li><label for="slide10"></label></li>
+				</ul>
+			</div>
+		
 			
-			버튼 
-		</footer>
-
-
-    <script type="text/javascript">
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
-        
-    </script>
+		</div>
+	</section>
+	
+	
+	
+	
+	
 </body>
 </html>

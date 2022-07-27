@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href="SearchStyle.css">
+    <link rel = "stylesheet" href="assets/css/SearchStyle.css">
     <script src="jquery-3.4.1.js"></script>
     
 </head>
