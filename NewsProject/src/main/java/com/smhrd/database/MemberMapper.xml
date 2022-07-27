@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis 멤버야~ 라고 알려주는 구문 -->
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<!-- insert, update 등 태그들은 id를 꼭 적어 준다. -->
+<!-- namespace -> 호출할 DAO의 경로를 적어 준다. -->
+<mapper namespace="com.smhrd.model.MemberDAO">
+	<!-- parameterType : sql 실행시 넘겨줄 피라미터의 실제 타입 (보내줄 값이 있다면 꼭 적는다.) -->
+	<insert id="insertMember" parameterType="com.smhrd.model.Member">
+		insert into user_info values(#{id},#{pw},#{name},#{catseq},sysdate,1)
+	</insert>
+	
+	<!-- resultType="" -> select문에서 조회를 통해 어떤 타입을 가져오는지 알려주는거임 -->
+	<select id="selectMember" parameterType="com.smhrd.model.Member" resultType="com.smhrd.model.Member">
+		select * from web_member where email=#{email} and pw=#{pw}
+		<!-- id=#{id(->필드이름)} and pw=#{pw(->필드이름)}
+			-> id와 pw가 vo객체 안의 id,pw와 동일해야~ 라는 의미 -->
+	</select>
+	
+	
+	
+</mapper>
