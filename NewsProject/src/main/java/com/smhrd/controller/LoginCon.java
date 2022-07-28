@@ -19,11 +19,11 @@ public class LoginCon extends HttpServlet {
 		//1.email, pw 받기
 				request.setCharacterEncoding("UTF-8");
 				
-				String id = request.getParameter("id");
-				String pw = request.getParameter("pw");
+				String mem_id = request.getParameter("mem_id");
+				String mem_pw = request.getParameter("mem_pw");
 				
 				//2. Member객체 생성(id,pw만 묶여진거~ 롬북사용?)
-				Member vo = new Member(id,pw);
+				Member vo = new Member(mem_id,mem_pw);
 				
 				//3. MemberDAO 객체 생성		
 				MemberDAO dao = new MemberDAO();
@@ -37,7 +37,7 @@ public class LoginCon extends HttpServlet {
 					// 5. 세션저장
 					HttpSession session = request.getSession();
 					session.setAttribute("loginMember", loginMember);
-					response.sendRedirect("main_page.jsp");
+					response.sendRedirect("MainPage.jsp");
 				}else { //로그인 실패
 					System.out.println("로그인실패");
 					response.sendRedirect("Login.jsp");			

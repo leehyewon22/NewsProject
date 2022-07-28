@@ -12,11 +12,11 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor // 변수(String타입) 받아주는 생성자 
 public class Member {
 	@NonNull
-	private String id;
+	private String mem_id;
 	@NonNull
-	private String pw;
-	private String name;
-	private String catseq;
-	private String joindate;
-	private String memtype;
+	private String mem_pw;
+	private String mem_name;
+	private String cat_seq;
+	private String mem_joindate;
+	private String mem_type;
 }

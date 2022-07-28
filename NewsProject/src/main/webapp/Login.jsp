@@ -81,12 +81,12 @@
         <h1>OO님 환영합니다!</h1>
         <form action="LoginCon" method="post">
             <div class="int-area">
-                <input type="text" name="id" id="id"
+                <input type="text" name="mem_id" id="mem_id"
                 autocomplete="off" >
                 <label for="id">USER NAME</label>
             </div>
             <div class="int-area">
-                <input type="password" name="pw" id="pw"
+                <input type="password" name="mem_pw" id="mem_pw"
                 autocomplete="off" >
                 <label for="pw">PASSWORD</label>
             </div>

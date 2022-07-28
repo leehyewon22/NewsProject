@@ -19,12 +19,12 @@ public class JoinCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		//요청데이터(파라미터) 받기
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String catseq = request.getParameter("catseq");
-		String joindate = request.getParameter("joindate");
-		String memtype = request.getParameter("memtype");
+		String id = request.getParameter("mem_id");
+		String pw = request.getParameter("mem_pw");
+		String name = request.getParameter("mem_name");
+		String catseq = request.getParameter("cat_seq");
+		String joindate = request.getParameter("mem_joindate");
+		String memtype = request.getParameter("mem_type");
 	
 		Member vo = new Member(id, pw, name, catseq, joindate, memtype);
 	
