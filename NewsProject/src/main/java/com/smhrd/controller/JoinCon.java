@@ -42,7 +42,7 @@ public class JoinCon extends HttpServlet {
 		if(cnt>0) { //회원가입성공
 			System.out.println("회원가입성공");
 			//포워딩 joinSuccess.jsp 이동 , email -> request 영역에 저장
-			RequestDispatcher rd = request.getRequestDispatcher("JoinSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
 			request.setAttribute("joinid",id); // (보낼거에대한이름, 보낼값)
 			rd.forward(request, response);
 		}else {
