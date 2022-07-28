@@ -36,9 +36,9 @@
             </div>
             </div>
             <div class="submit">
-                <a href="MainPage.jsp"><input type="submit" value="submit"></a>
+                <a href="MainPage.jsp"><input type="submit" value="submit" style="float: right;"></a>
+	            <button type="button" style="float: right;" onclick="location.href='Join.jsp'">sign up</button>
             </div>
-            <button type="button" onclick="location.href='Join.jsp'">sign up</button>
             
 	</form>
                 
