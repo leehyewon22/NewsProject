@@ -74,7 +74,12 @@
 	
 			<!-- 로그인 아이콘 -->
 			<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
+			<%if(loginMember==null) { %>
 			<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" alt="" class="a"/></a>
+			<%} else{ %>
+			<a href="LogoutCon">로그아웃<img src="images/user.png" alt="" class="a"/></a>
+			<%} %>
+			
 			<!-- 검색 아이콘 -->
 			<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" alt="" class="a" /></a>
 			<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
