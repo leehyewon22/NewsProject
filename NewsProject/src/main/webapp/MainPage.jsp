@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link href="./assets/css/main_slide.css" rel="stylesheet" type="text/css">
 <title>MAINPAGE</title>
-	<style>
+<style>
         #header_login1{
 		  position: fixed;
 		  top: 0;
@@ -39,9 +39,8 @@
 		}
 		nav{
 			height: 100px;
-			margin-top: 80px;
+			margin-top: 40px;
  			text-align: center;
- 			padding: 50px 0 0 0;
  			font-weight: bold;
  			font-size: 30px;
  			word-spacing: 1.2em;
