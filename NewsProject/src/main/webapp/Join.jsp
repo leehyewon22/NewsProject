@@ -48,17 +48,17 @@
 			<label for="정치">정치</label>
 			<input type="checkbox" id="정치" value="1001" name="category">
 			<label for="경제">경제</label>
-			<input type="checkbox" id="경제" value="1002" name="category"><br>
+			<input type="checkbox" id="경제" value="1021" name="category"><br>
 			<label for="사회">사회</label>
-			<input type="checkbox" id="사회" value="1003" name="category">
+			<input type="checkbox" id="사회" value="1022" name="category">
 			<label for="생활/문화">생활/문화</label>
-			<input type="checkbox" id="생활/문화" value="1004" name="category"><br>
+			<input type="checkbox" id="생활/문화" value="1023" name="category"><br>
 			<label for="IT/과학">IT/과학</label>
-			<input type="checkbox" id="IT/과학" value="1005" name="category">
+			<input type="checkbox" id="IT/과학" value="1024" name="category">
 			<label for="세계">세계</label>
-			<input type="checkbox" id="세계" value="1006" name="category">
+			<input type="checkbox" id="세계" value="1025" name="category">
 			<label for="날씨">날씨</label>
-			<input type="checkbox" id="날씨" value="1007" name="category">
+			<input type="checkbox" id="날씨" value="1026" name="category">
 			</td>
 		</tr>
 		<tr><td></td>

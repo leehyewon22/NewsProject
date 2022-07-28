@@ -11,7 +11,6 @@ public class MemberDAO {
 	
 		// 회원가입
 			public int insertMember(Member vo) {
-
 				int cnt = 0;
 
 				try {
