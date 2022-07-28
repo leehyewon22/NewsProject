@@ -10,11 +10,9 @@
 <link href="./assets/css/main_slide.css" rel="stylesheet" type="text/css">
 <title>MAINPAGE</title>
 	<style>
-	    body{background: linear-gradient(360deg, rgba(172,203,238,1) 0%, rgba(231,240,253,1) 100%);}
-        header{
+        #header_login1{
 		  position: fixed;
 		  top: 0;
-		  left: 0;
 		  right: 0;
 		  height: 100px;
 		  padding: 1rem;
@@ -24,12 +22,20 @@
 		  flex-direction: row-reverse;
 		  word-spacing: 1.2em;
 		  letter-spacing: 3px;
+		  
 		}
-	
-		#header_login img{
+		#header_login1 img.a{
 			width:30px; 
 			height: 30px;
 			margin: 0 15px 0 10px;
+		}
+		#header_login2 img{
+			margin: 15px 0 0 0;
+			width:  350px; 
+			height: 100%;
+			top:  0;
+			left: 0;
+			position: relative;
 		}
 		nav{
 			height: 100px;
@@ -52,10 +58,12 @@
             background: linear-gradient(90deg, rgba(137,207,240,1) 0%, rgba(108,180,238,1) 50%, rgba(0,127,255,1) 100%);
             display : none;
         }
+       
+
 	
     </style>
 </head>
-<body>
+<body bgcolor="#F0F8FF" >
 	<%
 		//session 값 가지고 오기
 		Member loginMember = (Member)session.getAttribute("loginMember");
@@ -65,15 +73,21 @@
 	
 	%>
 
-	<header id="header_login">
-		<!-- 로그인 아이콘 -->
-		<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
-		<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" alt="" /></a>
-		<!-- 검색 아이콘 -->
-		<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" alt="" /></a>
-		<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
-	</header>
-
+<!-- 	<header id="header_login"> -->
+	<div id="header_login1">
+	
+			<!-- 로그인 아이콘 -->
+			<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
+			<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" alt="" class="a"/></a>
+			<!-- 검색 아이콘 -->
+			<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" alt="" class="a" /></a>
+			<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->
+	<!-- 	</header> -->
+	</div>
+	<div id="header_login2">
+			<!-- 로고 아이콘 -->
+		<a href="MainPage.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
+	</div>
 	<nav>
 		<div>	
 		<a href="#main_keyword" id="category_new" onclick="keyword()"><b>실시간키워드</b></a>
