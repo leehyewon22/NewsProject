@@ -15,7 +15,7 @@
 <body>
 	<div class="wrap">
         <div class="login">
-            <h2>Log-in</h2>
+            <h2>Login</h2>
             <div class="login_id">
                 <h4>ID</h4>
                 <input type="id" name="" id="" placeholder="ID">

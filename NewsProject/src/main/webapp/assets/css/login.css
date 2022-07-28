@@ -21,12 +21,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: #F0F8FF;
+    /* background: rgba(0, 0, 0, 0.1); */
   }
   
   .login {
     width: 30%;
-    height: 600px;
+    height: 550px;
     background: white;
     border-radius: 20px;
     display: flex;
@@ -36,7 +37,7 @@
   }
   
   h2 {
-    color: cornflowerblue;
+    color: #0000CC;
     font-size: 2em;
   }
   .login_sns {
