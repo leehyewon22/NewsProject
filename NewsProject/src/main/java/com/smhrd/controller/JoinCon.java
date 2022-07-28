@@ -1,9 +1,11 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.Member;
 import com.smhrd.model.MemberDAO;
 
+@WebServlet("/JoinCon")
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -22,11 +25,13 @@ public class JoinCon extends HttpServlet {
 		String id = request.getParameter("mem_id");
 		String pw = request.getParameter("mem_pw");
 		String name = request.getParameter("mem_name");
-		String catseq = request.getParameter("cat_seq");
-		String joindate = request.getParameter("mem_joindate");
-		String memtype = request.getParameter("mem_type");
+		BigDecimal catseq = new BigDecimal(request.getParameter("category"));
+		/*
+		 * String joindate = request.getParameter("mem_joindate"); String memtype =
+		 * request.getParameter("mem_type");
+		 */
 	
-		Member vo = new Member(id, pw, name, catseq, joindate, memtype);
+		Member vo = new Member(id, pw, name, catseq);
 	
 		MemberDAO dao = new MemberDAO();
 		

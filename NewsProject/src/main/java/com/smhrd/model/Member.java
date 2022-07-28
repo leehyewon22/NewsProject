@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +18,16 @@ public class Member {
 	@NonNull
 	private String mem_pw;
 	private String mem_name;
-	private String cat_seq;
+	private BigDecimal cat_seq;
 	private String mem_joindate;
 	private String mem_type;
+	public Member(@NonNull String mem_id, @NonNull String mem_pw, String mem_name, BigDecimal cat_seq) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_name = mem_name;
+		this.cat_seq = cat_seq;
+	}
+	
+	
 }
