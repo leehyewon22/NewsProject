@@ -5,24 +5,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/join.css">
 	<title>Join</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+<form action="JoinCon" method="post"> 
 <div class="wrap">
        <div class="join">
            <h2>Join</h2>
            <div class="join_id">
                <h4>ID</h4>
-               <input type="id" name="" id="" placeholder="ID">
+               <input type="text" name="mem_id" id="mem_id" placeholder="ID">
+               <input type="button" value="ID중복체크" onclick="checkE()">
+               <span id="resultCheck"></span>
+               
            </div>
            <div class="join_pw">
                <h4>Password</h4>
-               <input type="password" name="" id="" placeholder="Password">
+               <input type="password" name="mem_pw" id="mem_pw" placeholder="Password">
            </div>
            <div class="join_pw">
                <h4>Password Confirm</h4>
@@ -30,7 +34,7 @@
            </div>
            <div class="join_name">
                <h4>Nickname</h4>
-               <input type="name" name="" id="" placeholder="Nickname">
+               <input type="text" name="mem_name" id="mem_name" placeholder="Nickname">
            </div>
            
            
@@ -98,35 +102,17 @@
            </div>
        </div>
    </div>
-
-
-
-
-
-
-
-	<!-- JoinCon은 url의 Mapping 값이다. 
-	(web.xml을 통해 확인가능) 파일 이름이 아니다! -->
-	<form action="JoinCon" method="post"> 
-	
 	</form>
-
-
-
-
-
-
-
 
 
 			<script>
 				function checkE(){
-					var inputE = $('#inputE').val()
+					var inputE = $('#mem_id').val()
 					console.log(inputE)
 					
 					$.ajax({ //비동기방식 - ajax
 						//요청 경로
-						url : 'EmailCheckCon',
+						url : 'IdCheckCon',
 						//요청 데이터{키(아무렇게나적음):실제값(위의 var inputE)}
 						data : {'inputE':inputE},
 						//요청 방식

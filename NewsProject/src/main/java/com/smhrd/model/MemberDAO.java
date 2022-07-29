@@ -49,6 +49,20 @@ public class MemberDAO {
 			}
 			
 			
+		// ID 중복체크
+			public boolean IdCheck(String inputE) {
+				boolean checkE = false;
+				
+				try {
+					checkE = sqlSession.selectOne("com.smhrd.model.MemberDAO.IdCheck",inputE);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}finally {
+					sqlSession.close();
+				}
+				return checkE;
+			}
+			
 			
 			
 			

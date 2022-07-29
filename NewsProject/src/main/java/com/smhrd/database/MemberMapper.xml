@@ -18,6 +18,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from user_info where mem_id=#{mem_id} and mem_pw=#{mem_pw}
 	</select>
 	
+	<select id="IdCheck" parameterType="String" resultType="boolean">
+		select case when count(*)>0 then 1
+					else 0
+				end result
+		from user_info where mem_id=#{mem_id}
+	</select>
+	
 	
 	
 </mapper>
