@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="./assets/css/join.css">
 	<title>Join</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		#mem_id{
+			position: relative;
+		}
+		#mem_id_check{
+			position: relative;
+			top:-60px;
+			left: 366px;
+		}
+	</style>
 </head>
 
 <body>
@@ -20,7 +30,7 @@
            <div class="join_id">
                <h4>ID</h4>
                <input type="text" name="mem_id" id="mem_id" placeholder="ID">
-               <input type="button" value="ID중복체크" onclick="checkE()">
+               <input type="button" id="mem_id_check" value="중복 체크" onclick="checkE()">
                <span id="resultCheck"></span>
                
            </div>
@@ -120,9 +130,9 @@
 						//요청-응답 성공
 						success : function(data){ // 서버에서 받아오는 변수를 data라는 변수라고 명명?하는 듯?
 							if(data=='true'){//data가 true -> 사용할 수 없는 아이디
-								$('#resultCheck').text('사용할 수 없는 아이디')
+								$('#resultCheck').text('😥사용할 수 없는 아이디입니다😥')
 							}else{//data가 false -> 사용할 수 있는 아이디
-								$('#resultCheck').text('사용할 수 있는 아이디')
+								$('#resultCheck').text('😊사용할 수 있는 아이디입니다😊')
 							}
 						},
 						error : function(){
