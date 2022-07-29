@@ -25,7 +25,8 @@ public class JoinCon extends HttpServlet {
 		String id = request.getParameter("mem_id");
 		String pw = request.getParameter("mem_pw");
 		String name = request.getParameter("mem_name");
-		BigDecimal catseq = new BigDecimal(request.getParameter("category"));
+		BigDecimal catseq = new BigDecimal(request.getParameter("cat"));
+		System.out.println(catseq);
 		/*
 		 * String joindate = request.getParameter("mem_joindate"); String memtype =
 		 * request.getParameter("mem_type");

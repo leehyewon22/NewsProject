@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="./assets/css/login.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	
+	<style type="text/css">
+		#header_login2 img{
+			margin: 10px 0 0 0;
+			width:  350px; 
+			height: 80%;
+			top:  -580%;
+			position: relative;
+		}
+		
+		
+	</style>
+	
+	
 </head>
 <body>
 
@@ -41,6 +54,12 @@
             </div>
             
 	</form>
+	
+	<!-- 로고 아이콘 -->
+	<div id="header_login2">
+		<a href="MainPage_cate1.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
+	</div>
+	
                 
         </div>
     </div>

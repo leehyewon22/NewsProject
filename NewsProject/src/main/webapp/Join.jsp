@@ -38,57 +38,57 @@
            </div>
            
            
-           <div class="\_cate">
+           <div class="join_cate">
                <h4>Category</h4> 
                <div class="wrapper">
 			
 			  <div class="container">
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1001">
 			      <div class="option_inner facebook">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-balance-scale"></i></div>
-			        <div class="cateName">정치</div>
+			        <div class="cateName" id="정치" value="1001">정치</div>
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" checked>
+			      <input type="checkbox" class="checkbox" name ="cat" value="1021" checked>
 			      <div class="option_inner twitter">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-eur"></i></div>
-			        <div class="cateName">경제</div>
+			        <div class="cateName" id="경제"  value="1021">경제</div>
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1022">
 			      <div class="option_inner instagram">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-users"></i></div>
-			        <div class="cateName">사회</div>
+			        <div class="cateName" id="사회" value="1022">사회</div>
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" checked>
+			      <input type="checkbox" class="checkbox" checked name ="cat" value="1023">
 			      <div class="option_inner linkedin">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-bath" aria-hidden="true"></i></div>
-			        <div class="cateName">생활/문화</div>
+			        <div class="cateName" id="생활/문화" value="1023">생활/문화</div>
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" checked>
+			      <input type="checkbox" class="checkbox" checked name ="cat" value="1024">
 			      <div class="option_inner whatsapp">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-flask"></i></div>
-			        <div class="cateName">IT/과학</div>
+			        <div class="cateName" id="IT/과학" value="1024">IT/과학</div>
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1025">
 			      <div class="option_inner google">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-globe"></i></div>
-			        <div class="cateName">세계</div>
+			        <div class="cateName" id="세계" value="1025">세계</div>
 			      </div>
 			    </label>
 			    
