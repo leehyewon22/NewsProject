@@ -52,7 +52,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1021" checked>
+			      <input type="checkbox" class="checkbox" name ="cat" value="1021">
 			      <div class="option_inner twitter">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-eur"></i></div>
@@ -68,7 +68,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" checked name ="cat" value="1023">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1023">
 			      <div class="option_inner linkedin">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-bath" aria-hidden="true"></i></div>
@@ -76,7 +76,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" checked name ="cat" value="1024">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1024">
 			      <div class="option_inner whatsapp">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-flask"></i></div>
