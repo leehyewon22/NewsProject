@@ -108,40 +108,40 @@
   }
   
 /*-------------------------------Category----------------------------------  */
-  .join_cate {
+.join_cate {
    margin-top: 20px;
    width: 80%;
- }
+}
  
- .join_cate .wrapper {
-
+.join_cate .wrapper {
    width: 100%;
-   height: 300px;
+   height: 220px;
    border-radius: 30px;
    margin-top: 10px;
-   padding: 0px 30px;
+   padding: 0px 20px;
    border: 1px solid lightgray;
    outline: none;
- }
+}
  
 /* .wrapper {
   width: 350px;
   margin: 100px auto 0;
-}
- */
+} */
+
 .container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 150px;
+  height: 200px;
+  margin : 0 0 0 15px;
 }
 
 .container .option_item {
   display: block;
   position: relative;
-  width: 120px;
+  width: 100px;
   height: 90px;
-  margin: 10px;
+  margin: 10px 14px 7px 14px;
 }
 
 .container .option_item .checkbox {
@@ -158,7 +158,7 @@
   background: #fff;
   border-radius: 5px;
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 15px;
   cursor: pointer;
   color: #585c68;
   display: block;
@@ -213,6 +213,10 @@
 
 
 
+
+
+
+/*-------------------------------Category color----------------------------------  */
 .option_item .checkbox:checked ~ .option_inner.facebook {
   border-color: #3b5999;
   color: #3b5999;
