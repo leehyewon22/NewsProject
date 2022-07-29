@@ -17,12 +17,30 @@
 		#mem_id_check{
 			position: relative;
 			top:-60px;
-			left: 366px;
+			left: 367px;
+		}
+		#header_login2 img{
+			margin: 10px 0 0 0;
+			width:  350px; 
+			height: 80%;
+			top:  -580%;
+			position: relative;
+
+		}
+		#header_login2{
+			text-align: center;
+			top: -100px;
 		}
 	</style>
 </head>
 
 <body>
+
+<!-- 로고 아이콘 -->
+	<div id="header_login2">
+		<a href="MainPage_cate1.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
+	</div>
+	
 <form action="JoinCon" method="post"> 
 <div class="wrap">
        <div class="join">
