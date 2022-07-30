@@ -38,7 +38,7 @@
 
 <!-- 로고 아이콘 -->
 	<div id="header_login2">
-		<a href="MainPage_cate1.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
+		<a href="Index.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
 	</div>
 	
 <form action="JoinCon" method="post"> 

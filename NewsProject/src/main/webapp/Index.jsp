@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -350,7 +351,16 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 							</section>
 
 					</div>
-
+					
+					<%
+		//session 값 가지고 오기
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		
+		// 메인페이지에서 세션이 필요한 것들??
+			
+	
+	%>
+					
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
@@ -358,7 +368,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
 							<ul class="actions">
 								<!-- <li><a href="generic.html" class="button">Learn More</a></li> -->
+										<%if(loginMember==null) { %>
 										<li><a href="Login.jsp" class="button">로그인</a></li>
+										<%} else{ %>
+										<a href="LogoutCon" class="button">로그아웃</a>
+										<%} %>
 										<li><a href="Join.jsp" class="button">회원가입</a></li>
 							</ul>
 						</section>

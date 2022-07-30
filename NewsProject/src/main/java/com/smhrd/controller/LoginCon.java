@@ -37,7 +37,7 @@ public class LoginCon extends HttpServlet {
 					// 5. 세션저장
 					HttpSession session = request.getSession();
 					session.setAttribute("loginMember", loginMember);
-					response.sendRedirect("MainPage_cate1.jsp");
+					response.sendRedirect("Index.jsp");
 				}else { //로그인 실패
 					System.out.println("로그인실패");
 					response.sendRedirect("Login.jsp");			
