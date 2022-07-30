@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link href="./assets/css/main_slide.css" rel="stylesheet" type="text/css">
 <title>MAINPAGE</title>
-<style>
+	<style>
         #header_login1{
 		  position: fixed;
 		  top: 0;
@@ -39,8 +39,9 @@
 		}
 		nav{
 			height: 100px;
-			margin-top: 40px;
+			margin-top: 80px;
  			text-align: center;
+ 			padding: 50px 0 0 0;
  			font-weight: bold;
  			font-size: 30px;
  			word-spacing: 1.2em;
@@ -77,11 +78,7 @@
 	
 			<!-- 로그인 아이콘 -->
 			<!-- <h2><a href="#" id="login_logo" >로그인</a></h2> -->
-			<%if(loginMember==null) { %>
 			<a href="Login.jsp" data-position="center" id="login_logo">로그인/회원가입<img src="images/user.png" alt="" class="a"/></a>
-			<%} else{ %>
-			<a href="LogoutCon">로그아웃<img src="images/user.png" alt="" class="a"/></a>
-			<%} %>
 			<!-- 검색 아이콘 -->
 			<a href="Search.jsp" data-position="center" id="search_logo">검색<img src="images/search.png" alt="" class="a" /></a>
 			<!-- <h2><a href="#" id="search_logo">검색</a></h2> -->

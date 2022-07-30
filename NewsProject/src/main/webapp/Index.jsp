@@ -78,7 +78,7 @@
 										
 									</div> -->
 									<!-- <span class="image"><img src="images/pic01.jpg" alt="" /></span> -->
-									<img src="images/pic_01.jpg">
+									<img src="images/pic_01.jpg" class="spotlightimg">
 								</div>
 							</section>
 
