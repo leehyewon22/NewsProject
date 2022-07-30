@@ -15,7 +15,7 @@
  <!-- Contents.jsp -->
  
      <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="About.css" media="screen">
+	<link rel="stylesheet" href="About.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" "="" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" "="" defer=""></script>
     <meta name="generator" content="Nicepage 4.15.8, nicepage.com">
@@ -27,12 +27,13 @@
 		"@type": "Organization",
 		"name": ""
 		}
-</script>
+	</script>
+	
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
     
-    
+    <!-- style 로그인 / 회원가입 -->
     	<style type="text/css">
     	
 			#button_Login{
@@ -45,20 +46,40 @@
 				margin-left: 1680px
 			}
     	</style>
-    <style type="text/css">
     	
-			#button_Login{
-				margin-left: -25px
-			}
-			#button_Join{
-				margin-left: 1500px
-			}
-			#button_Logout{
-				margin-left: 1680px
-			}
-    	</style>
+    	<!-- style 검색창 -->
+    	<style>
     
+		#header form{
+			margin : 0 200px 0 200px;
+		}
+		
+		</style>
+    
+       <script>
+    <!--  검색창 버튼 클릭 합수 -->
+		    function searchClick(){
+		    	 
+		    	 var searchText = document.getElementById("searchKeyword");
+		    	 if(searchText!=null){
+		    		/*  alert("검색성공!! = "+searchText.value);*/
+		    		 self.location.href = "{{url_for('Search_list')}}?search=" + searchText.value; 
+		    		 return true
+		    	 }else{
+		    		  return false
+		    	 }
+		    	 
+	/* 	    	var v_search = document.getElementById("search").value;
+		
+		        if(v_search == "") {
+		            return false
+		        } else {
+		            self.location.href = "{{url_for('Search_list')}}?search=" + v_search;
+		        } */
+		    } 
+	</script>
 </head>
+
 <body class="is-preload">
 
 	<%
@@ -88,8 +109,21 @@
 						<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
 						<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
 						<h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<!-- 검색창 -->
+<!-- 						<p>Just another free, fully responsive site template<br />
+						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+
+						<form action="http://127.0.0.1:5000" method="get" class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1">
+					          <button class="u-search-button" type="submit">
+						          <div class="u-file-icon u-search-icon u-text-grey-40 u-search-icon-1" style="display: flex; justify-content: center;">
+							          <div> Search </div> <img src="images/searchIcon.png" alt="" >
+							          </div>
+					          </button>
+				          <input type="search" name="search" id="search" onclick="searchClick();" autocomplete="off" required>
+				        </form>		
+					
+					
+					
 					</header>
 
 				<!-- Nav -->

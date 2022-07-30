@@ -13296,8 +13296,9 @@ section.u-image:not(.u-hover-box),
 }
 .u-file-icon img {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  height: 30px;;
+  
 }
 .u-back-to-top {
   position: fixed;
@@ -17043,9 +17044,15 @@ blockquote .small:before {
 .u-search button span {
   display: block;
   height: 1em;
-  width: 1em;
+  /* width: 1em; */
   line-height: 1em;
+  text-align:right;
 }
+
+/* .u-search button span #text{
+  text-align:ri;
+} */
+
 .u-search input {
   flex: 1;
   position: relative;

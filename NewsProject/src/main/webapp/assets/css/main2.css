@@ -117,6 +117,12 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+/* Search */
+			header#SearchBtn{
+				margin: 0 0 25px 0;
+			}
+
+
 /* Type */
 
 	body {
@@ -2705,6 +2711,7 @@ input, select, textarea {
 	header.major h2:after {
 		background-color: rgba(255, 255, 255, 0.35);
 	}
+	
 
 /* Table */
 
@@ -3144,7 +3151,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 980px) {
-
+	
 			#header {
 				padding: 4em 3em 0.1em 3em ;
 			}
