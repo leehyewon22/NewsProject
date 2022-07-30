@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.MemberDAO">
 	<!-- parameterType : sql 실행시 넘겨줄 피라미터의 실제 타입 (보내줄 값이 있다면 꼭 적는다.) -->
 	<insert id="insertMember" parameterType="com.smhrd.model.Member">
-		insert into user_info values(#{mem_id},#{mem_pw},#{mem_name},#{cat_seq},sysdate,'1')
+		insert into user_info values(#{mem_id},#{mem_pw},#{mem_name},#{cat_seq},sysdate,'1',#{cat_seq2},#{cat_seq3})
 	</insert>
 	
 	<!-- resultType="" -> select문에서 조회를 통해 어떤 타입을 가져오는지 알려주는거임 -->

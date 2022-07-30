@@ -25,14 +25,49 @@ public class JoinCon extends HttpServlet {
 		String id = request.getParameter("mem_id");
 		String pw = request.getParameter("mem_pw");
 		String name = request.getParameter("mem_name");
-		BigDecimal catseq = new BigDecimal(request.getParameter("cat"));
+		// 사용자의 카테고리 입력을 먼저 받기
+		String[] catseq = request.getParameterValues("cat");
+//		BigDecimal cat_seq = new BigDecimal(request.getParameterValues("cat"));
+		// 입력을 받은 카테고리를 db와 비교하기 위해 한번 더 저장?
+//		BigDecimal catseq = new BigDecimal(request.getParameter("cat"));
 		System.out.println(catseq);
+		
+		BigDecimal[] catArray = new BigDecimal[3];
+		int i = 0;
+		for(String cat : catseq) {
+			BigDecimal bdCat = new BigDecimal(cat);
+			catArray[i] = bdCat;
+			i++;
+		}
+		
+		
+		
+		System.out.println(catArray[0]);
+		System.out.println(catArray[1]);
+		System.out.println(catArray[2]);
+		/*
+		String catnum = null;
+		int num = 0;
+		// 배열에 담긴 선택된 카테고리 출력
+		if(catseq!=null) {
+			for(int i=0; i<catseq.length;i++) {
+				System.out.println(catseq[i]);
+				catnum += catseq[i];
+			}
+		}
+		System.out.println(catnum);
+		catnum = catnum.replace("null", "");
+		System.out.println(catnum);
+		// -----------------------------------------
+		
+		num = Integer.parseInt(catnum);
+		System.out.println(num);
 		/*
 		 * String joindate = request.getParameter("mem_joindate"); String memtype =
 		 * request.getParameter("mem_type");
 		 */
 	
-		Member vo = new Member(id, pw, name, catseq);
+		Member vo = new Member(id, pw, name, catArray[0], catArray[1], catArray[2]);
 	
 		MemberDAO dao = new MemberDAO();
 		

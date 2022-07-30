@@ -21,13 +21,22 @@ public class Member {
 	private BigDecimal cat_seq;
 	private String mem_joindate;
 	private String mem_type;
-	public Member(@NonNull String mem_id, @NonNull String mem_pw, String mem_name, BigDecimal cat_seq) {
+	private BigDecimal cat_seq2;
+	private BigDecimal cat_seq3;
+	
+	public Member(@NonNull String mem_id, @NonNull String mem_pw, String mem_name,BigDecimal cat_seq, BigDecimal cat_seq2, BigDecimal cat_seq3) {
 		super();
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_name = mem_name;
 		this.cat_seq = cat_seq;
+		this.cat_seq2 = cat_seq2;
+		this.cat_seq3 = cat_seq3;
 	}
+	public Member(String id, String pw, String name, String[] catseq) {
+	}
+	
+	
 	
 	
 }
