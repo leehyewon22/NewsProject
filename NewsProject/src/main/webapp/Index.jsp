@@ -26,12 +26,59 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": ""
-}</script>
+		}
+</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="About">
     <meta property="og:type" content="website">
+    
+    
+    	<style type="text/css">
+    	
+			#button_Login{
+				margin-left: -25px
+			}
+			#button_Join{
+				margin-left: 1500px
+			}
+			#button_Logout{
+				margin-left: 1680px
+			}
+    	</style>
+    <style type="text/css">
+    	
+			#button_Login{
+				margin-left: -25px
+			}
+			#button_Join{
+				margin-left: 1500px
+			}
+			#button_Logout{
+				margin-left: 1680px
+			}
+    	</style>
+    
 </head>
 <body class="is-preload">
+
+	<%
+		//session 값 가지고 오기
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		
+		// 메인페이지에서 세션이 필요한 것들??
+	%>
+
+
+	<ul class="actions">
+								<!-- <li><a href="generic.html" class="button">Learn More</a></li> -->			
+								<%if(loginMember==null) { %>
+							    <a href="Join.jsp" class="button" id="button_Join" ><li style="color:black">회원가입</li></a>
+								<a href="Login.jsp" class="button" id="button_Login"><li style="color:black">로그인</li></a>
+								<%} else{ %>
+								<a href="LogoutCon" class="button" id="button_Logout"><li style="color:black">로그아웃</li></a>
+								<%} %>
+	</ul>
+
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -352,29 +399,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 
 					</div>
 					
-					<%
-		//session 값 가지고 오기
-		Member loginMember = (Member)session.getAttribute("loginMember");
-		
-		// 메인페이지에서 세션이 필요한 것들??
-			
-	
-	%>
 					
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
 							<h2>Aliquam sed mauris</h2>
 							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<!-- <li><a href="generic.html" class="button">Learn More</a></li> -->
-										<%if(loginMember==null) { %>
-										<li><a href="Login.jsp" class="button">로그인</a></li>
-										<%} else{ %>
-										<a href="LogoutCon" class="button">로그아웃</a>
-										<%} %>
-										<li><a href="Join.jsp" class="button">회원가입</a></li>
-							</ul>
 						</section>
 						<section>
 							<h2>Etiam feugiat</h2>
