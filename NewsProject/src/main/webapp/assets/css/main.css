@@ -84,7 +84,6 @@
 .section input[id="slide09"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(9) > label {background:#6495ED;}
 .section input[id="slide10"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(10) > label {background:#6495ED;}
 
-
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -201,18 +200,12 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/* Search */
-			header#SearchBtn{
-				margin: 0 0 25px 0;
-			}
-
-
 /* Type */
 
 	body {
-		background-color: #F0F8FF;
+		background-color: #f0f8ff;
 		/* color: rgba(255, 255, 255, 0.65); */
-		color: black;
+		color: #002244;
 	}
 
 	body, input, select, textarea {
@@ -2733,6 +2726,7 @@ input, select, textarea {
 
 		header.major h2 {
 			font-size: 2em;
+			text-align: center;
 		}
 
 			header.major h2:after {
@@ -2794,7 +2788,10 @@ input, select, textarea {
 
 	header.major h2:after {
 		background-color: rgba(255, 255, 255, 0.35);
+		margin-left: auto;
+		margin-right: auto;
 	}
+	
 	
 
 /* Table */
@@ -3082,9 +3079,8 @@ input, select, textarea {
 		}
 		
 		.spotlightimg{
-		
-			width: 1500px;
-			height: 500px;
+			width: 100%;
+			height: 600px;
 		}
 
 			.spotlight .content > :last-child {
@@ -3184,7 +3180,8 @@ input, select, textarea {
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			/* padding: 7em 5em 4em 5em ; */
+			padding: 5em 5em 4em 5em ;
 		}
 
 			#header.alt h1 {
@@ -3235,7 +3232,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 980px) {
-	
+
 			#header {
 				padding: 4em 3em 0.1em 3em ;
 			}
@@ -3680,7 +3677,8 @@ input, select, textarea {
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
+			/* padding: 5em 5em 3em 5em ; */
+			padding: 2em 5em 3em 5em ;
 			border-top: solid 1px #dddddd;
 		}
 

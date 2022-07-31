@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index Page</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>Insert title here</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
- 
-	    <!-- <link rel="stylesheet" href="nicepage.css" media="screen"> -->
+		<!-- <link rel="stylesheet" href="nicepage.css" media="screen"> -->
 	    <link rel="stylesheet" href="assets/css/nicepage.css" media="screen">
 		<link rel="stylesheet" href="About.css" media="screen">
 	    <meta name="generator" content="Nicepage 4.15.8, nicepage.com">
@@ -50,9 +50,8 @@
 		</style>
     
        <script>
-    <!--  검색창 버튼 클릭 합수 -->
+   
 		    function searchClick(){
-		    	 
 		    	 var searchText = document.getElementById("searchKeyword");
 		    	 if(searchText!=null){
 		    		/*  alert("검색성공!! = "+searchText.value);*/
@@ -70,40 +69,35 @@
 		            self.location.href = "{{url_for('Search_list')}}?search=" + v_search;
 		        } */
 		    } 
-	</script>
+		</script>
+	</head>
+
 </head>
-
-<body class="is-preload">
-
-	<%
-		//session 값 가지고 오기
-		Member loginMember = (Member)session.getAttribute("loginMember");
-		// 메인페이지에서 세션이 필요한 것들??
-	%>
-
-
-	<ul class="actions">
-		<!-- <li><a href="generic.html" class="button">Learn More</a></li> -->			
-		<%if(loginMember==null) { %>
-		<a href="Join.jsp" class="button" id="button_Join" ><li style="color:black">회원가입</li></a>
-		<a href="Login.jsp" class="button" id="button_Login"><li style="color:black">로그인</li></a>
-		<%} else{ %>
-		<a href="LogoutCon" class="button" id="button_Logout"><li style="color:black">로그아웃</li></a>
-		<%} %>
-	</ul>
-
+	<body class="is-preload">
+		<%
+			//session 값 가지고 오기
+			Member loginMember = (Member)session.getAttribute("loginMember");
+			// 메인페이지에서 세션이 필요한 것들??
+		%>
+	
+	 
+	 	<ul class="actions">
+			<!-- <li><a href="generic.html" class="button">Learn More</a></li> -->			
+			<%if(loginMember==null) { %>
+			<a href="Join.jsp" class="button" id="button_Join" ><li style="color:black">회원가입</li></a>
+			<a href="Login.jsp" class="button" id="button_Login"><li style="color:black">로그인</li></a>
+			<%} else{ %>
+			<a href="LogoutCon" class="button" id="button_Logout"><li style="color:black">로그아웃</li></a>
+			<%} %>
+		</ul>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header" class="alt">
-					
 						<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
 						<h1>Stellar</h1>
 						<!-- 검색창 -->
-<!-- 						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-
 						<form action="http://127.0.0.1:5000" method="get" class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1">
 					          <button class="u-search-button" type="submit">
 						          <div class="u-file-icon u-search-icon u-text-grey-40 u-search-icon-1" style="display: flex; justify-content: center;">
@@ -111,8 +105,7 @@
 							          </div>
 					          </button>
 				          <input type="search" name="search" id="search" onclick="searchClick();" autocomplete="off" required>
-				        </form>		
-					
+				        </form>	
 					</header>
 
 				<!-- Nav -->
@@ -129,9 +122,9 @@
 					<div id="main">
 
 						<!-- Introduction -->
-							<section id="intro" class="main">
+<!-- 							<section id="intro" class="main">
 								<div class="spotlight">
-<!-- 									<div class="content">
+									<div class="content">
 										<header class="major">
 											<h2>Ipsum sed adipiscing</h2>
 										</header>
@@ -141,15 +134,22 @@
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
-										
-									</div> -->
-									<!-- <span class="image"><img src="images/pic01.jpg" alt="" /></span> -->
-									<img src="images/pic_01.jpg" class="spotlightimg">
+									</div>
+									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+								</div>
+							</section> -->
+							
+							<section id="intro" class="main">
+								<header class="major">
+									<h2>RealTime Keyword</h2>
+								</header>
+								<div class="spotlight">
+									<img src="images/pic01.jpg" class="spotlightimg">
 								</div>
 							</section>
 
-							<!-- First Section -->
-							<section id="first" class="main special">
+						<!-- First Section -->
+					<section id="first" class="main special">
 								<header class="major">
 									<h2>First Category</h2>
 								</header>
@@ -248,8 +248,8 @@
 									</div>
 									</div>
 							</section>
-
-						<!-- Second Section -->
+							
+						<!-- Second Category -->
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Second Category</h2>
@@ -286,7 +286,7 @@
 								</footer>
 							</section>
 
-						<!-- Get Started -->
+						<!--Third Category -->
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Third Category</h2>
@@ -302,13 +302,15 @@
 							</section>
 
 					</div>
-					
-					
+
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
 							<h2>Aliquam sed mauris</h2>
 							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn More</a></li>
+							</ul>
 						</section>
 						<section>
 							<h2>Etiam feugiat</h2>
@@ -346,4 +348,3 @@
 
 	</body>
 </html>
-
