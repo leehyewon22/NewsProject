@@ -49,7 +49,7 @@
             </div>
             </div>
             <div class="submit">
-                <a href="Index.jsp"><input type="submit" value="submit" style="float: right;"></a>
+                <a href="MainPage.jsp"><input type="submit" value="submit" style="float: right;"></a>
 	            <button type="button" style="float: right;" onclick="location.href='Join.jsp'">sign up</button>
             </div>
             
@@ -57,7 +57,7 @@
 	
 	<!-- 로고 아이콘 -->
 	<div id="header_login2">
-		<a href="Index.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
+		<a href="MainPage.jsp" data-position="center" id="News_Logo" ><img src="images/NEWSLOGO2.png" alt=""></a>
 	</div>
 	
                 

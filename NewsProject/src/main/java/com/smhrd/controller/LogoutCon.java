@@ -19,7 +19,7 @@ public class LogoutCon extends HttpServlet {
 				//세션 삭제 -> invalidate() 전체삭제 / removeAttribute() 하나삭제
 				//LoginCon에 생성된 세션값 name값 확인 후 작성!! (중요)
 				session.removeAttribute("loginMember");
-				response.sendRedirect("Index.jsp");
+				response.sendRedirect("MainPage.jsp");
 	}
 
 }
