@@ -33,6 +33,24 @@
 		}
 	</style>
 </head>
+	
+	<!-- 카테고리 3개 제한! -->
+	<script>
+		function count_check(obj){
+			var chkBox = document.getElementsByName("cat"); // name 값 cat을 불러옴
+			var chkCnt = 0;
+			for(var i = 0; i < chkBox.length; i++){
+				if(chkBox[i].checked){
+					chkCnt++;
+				}
+			}
+			if(chkCnt > 3){
+				alert("3개까지 체크할 수 있습니다.");
+				obj.checked = false;
+				return false;
+			}
+		}
+	</script>
 
 <body>
 
@@ -72,7 +90,7 @@
 			
 			  <div class="container">
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1001">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1001" onclick="count_check(this)">
 			      <div class="option_inner facebook">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-balance-scale"></i></div>
@@ -80,7 +98,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1021">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1021" onclick="count_check(this)">
 			      <div class="option_inner twitter">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="icon solid fa fa-usd"></i></div>
@@ -88,7 +106,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1022">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1022" onclick="count_check(this)">
 			      <div class="option_inner instagram">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-users"></i></div>
@@ -96,7 +114,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1023">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1023" onclick="count_check(this)">
 			      <div class="option_inner linkedin">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-weixin" aria-hidden="true"></i></div>
@@ -104,7 +122,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1024">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1024" onclick="count_check(this)">
 			      <div class="option_inner whatsapp">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-flask"></i></div>
@@ -112,7 +130,7 @@
 			      </div>
 			    </label>
 			    <label class="option_item">
-			      <input type="checkbox" class="checkbox" name ="cat" value="1025">
+			      <input type="checkbox" class="checkbox" name ="cat" value="1025" onclick="count_check(this)">
 			      <div class="option_inner google">
 			        <div class="tickmark"></div>
 			        <div class="icon"><i class="fa fa-globe"></i></div>
@@ -159,6 +177,7 @@
 					})
 				}
 			</script>
+			
 
 
 </body>
