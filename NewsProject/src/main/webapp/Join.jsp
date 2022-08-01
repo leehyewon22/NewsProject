@@ -83,7 +83,7 @@
 			      <input type="checkbox" class="checkbox" name ="cat" value="1021">
 			      <div class="option_inner twitter">
 			        <div class="tickmark"></div>
-			        <div class="icon"><i class="fa fa-eur"></i></div>
+			        <div class="icon"><i class="icon solid fa fa-usd"></i></div>
 			        <div class="cateName" id="경제"  value="1021">경제</div>
 			      </div>
 			    </label>
@@ -99,7 +99,7 @@
 			      <input type="checkbox" class="checkbox" name ="cat" value="1023">
 			      <div class="option_inner linkedin">
 			        <div class="tickmark"></div>
-			        <div class="icon"><i class="fa fa-bath" aria-hidden="true"></i></div>
+			        <div class="icon"><i class="fa fa-weixin" aria-hidden="true"></i></div>
 			        <div class="cateName" id="생활/문화" value="1023">생활/문화</div>
 			      </div>
 			    </label>
