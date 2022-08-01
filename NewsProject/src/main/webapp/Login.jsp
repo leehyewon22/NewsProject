@@ -21,6 +21,21 @@
 			position: relative;
 		}
 		
+		#login_form{
+			margin: 100px 0 0 100px;
+			width: 100%;
+			position: relative;
+		}
+		#login_title{
+			align-center : center; 
+			width: 100%;
+			position: relative;
+		}
+		#login_title{
+			top: -30px;
+			left:190px;
+		}
+		
 		
 	</style>
 	
@@ -30,10 +45,10 @@
 
 	<div class="wrap">
         <div class="login">
-            <h2>Login</h2>
+	<form action="LoginCon" method="post" id="login_form">
+            <h2 id="login_title">Login</h2>
             <div class="login_id">
                 <h4>ID</h4>
-	<form action="LoginCon" method="post">
                 <input type="id" name="mem_id"  placeholder="ID">
             </div>
             <div class="login_pw">
