@@ -133,10 +133,10 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li class="hh2"><a href="#intro" class="active">RealTime Keyword</a></li>
-				<li class="hh2"><a href="#first">First category</a></li>
-				<li class="hh2"><a href="#second">Second category</a></li>
-				<li class="hh2"><a href="#cta">Third category</a></li>
+				<li><a href="#intro" class="active">RealTime Keyword</a></li>
+				<li><a href="#first">First category</a></li>
+				<li><a href="#second">Second category</a></li>
+				<li><a href="#cta">Third category</a></li>
 			</ul>
 		</nav>
 
