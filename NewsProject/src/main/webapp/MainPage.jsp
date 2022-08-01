@@ -20,12 +20,49 @@
 <link id="u-theme-google-font" rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+
 <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": ""
 		}
 		</script>
+
+			<style >
+						
+						.htag{
+							font-family: 'Noto Sans KR', sans-serif;
+						}
+					
+					
+						.ptag{
+							font-family: 'Noto Sans KR', sans-serif;
+						}
+						
+						/* 
+						.logo2{
+							font-family: 'Jua', sans-serif;
+
+						} */
+						.hh2 {
+							font-family: 'Jua', sans-serif;
+						}
+						
+			</style>
+
+
 
 <meta name="theme-color" content="#478ac9">
 <meta property="og:title" content="About">
@@ -76,7 +113,7 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
-			<h1>Stellar</h1>
+			<h1 class="hh2">'닉네임'님과 함께 할 뉴스</h1>
 			<!-- 검색창 -->
 			<form action="http://127.0.0.1:5000" method="get"
 				class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1" style="background: white;border-radius: 10px;">
@@ -96,10 +133,10 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a href="#intro" class="active">RealTime Keyword</a></li>
-				<li><a href="#first">First category</a></li>
-				<li><a href="#second">Second category</a></li>
-				<li><a href="#cta">Third category</a></li>
+				<li class="hh2"><a href="#intro" class="active">RealTime Keyword</a></li>
+				<li class="hh2"><a href="#first">First category</a></li>
+				<li class="hh2"><a href="#second">Second category</a></li>
+				<li class="hh2"><a href="#cta">Third category</a></li>
 			</ul>
 		</nav>
 
@@ -108,7 +145,7 @@
 
 			<section id="intro" class="main">
 				<header class="major">
-					<h2>RealTime Keyword</h2>
+					<h2 class="hh2">RealTime Keyword</h2>
 				</header>
 				<div class="spotlight">
 					<img src="images/pic01.jpg" class="spotlightimg">
@@ -216,7 +253,7 @@
 			<!-- Second Category -->
 			<section id="second" class="main special">
 				<header class="major">
-					<h2>Second Category</h2>
+					<h2 class="hh2">Second Category</h2>
 				</header>
 				<form action="#" method="post">
 
@@ -315,7 +352,7 @@
 			<!--Third Category -->
 			<section id="cta" class="main special">
 				<header class="major">
-					<h2>Third Category</h2>
+					<h2 class="hh2">Third Category</h2>
 				<form action="#" method="post">
 
 					<div class="section" id="section3">
