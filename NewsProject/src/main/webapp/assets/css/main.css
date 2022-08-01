@@ -18,7 +18,7 @@
  
 .section .slidelist .textbox {position:absolute;z-index:10;top:25%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
 .section .slidelist .textbox h3 {font-size:36px;z-index:20;color:black;transform:translateY(30px);transition:all .5s;}
-.section .slidelist .textbox p {font-size:21px;z-index:20;color:black;opacity:1;transform:translateY(30px);transition:all .5s;}
+.section .slidelist .textbox p {font-size:21px;z-index:20;color:black;opacity:0;transform:translateY(30px);transition:all .5s;}
  
  
 /*------------------------------------------------------------------------------------------------------------*/
