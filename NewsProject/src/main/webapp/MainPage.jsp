@@ -76,10 +76,10 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
-			<h1>'닉네임'님과 함께 할 뉴스</h1>
+			<h1>Stellar</h1>
 			<!-- 검색창 -->
 			<form action="http://127.0.0.1:5000" method="get"
-				class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1">
+				class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1" style="background: white;border-radius: 10px;">
 				<button class="u-search-button" type="submit">
 					<div
 						class="u-file-icon u-search-icon u-text-grey-40 u-search-icon-1"
@@ -224,7 +224,8 @@
 						<input type="radio" name="slide" id="slide10" checked>
 						<script>
 							for (let i = 1; i <= 9; i++) {
-								document.write('<input type="radio" name="slide" id="slide1'+i+'">');
+								document
+										.write('<input type="radio" name="slide" id="slide1'+i+'">');
 							}
 						</script>
 
@@ -317,82 +318,78 @@
 					<h2>Third Category</h2>
 				<form action="#" method="post">
 
-					<div class="section s1">
+					<div class="section" id="section3">
 						<input type="radio" name="slide" id="slide20" checked>
 						<script>
 							for (let i = 1; i <= 9; i++) {
-								document
-										.write('<input type="radio" name="slide" id="slide2'+i+'">');
+								document.write('<input type="radio" name="slide" id="slide2'+i+'">');
 							}
 						</script>
 
 						<div class="slidewrap" id="slidewrap3">
 
-							<ul class="slidelist">
+							<ul class="slidelist" id="slidelist3">
 								<!-- 슬라이드 영역 -->
 								<script>
 									for (let i = 0; i < 10; i++) {
-										document
-												.write('<li class="slideitem">');
+										document.write('<li class="slideitem">');
 										document.write('<a>');
 										document.write('<div class="textbox">');
-										document.write('<h3 class="htag">2' + i
-												+ '번째 슬라이드</h3>');
-										document.write('<p class="ptag">2' + i
-												+ '번째 슬라이드 입니다.</p>');
+										document.write('<h3 class="htag">2' + i+ '번째 슬라이드</h3>');
+										document.write('<p class="ptag">2' + i+ '번째 슬라이드 입니다.</p>');
 										document.write('</div>');
-										document
-												.write('<img src="images/bg/pic_'+i+'.jpg">');
+										document.write('<img src="images/bg/pic_'+i+'.jpg">');
 										document.write('</a>');
 										document.write('</li>');
 									}
 								</script>
 
 								<!-- 좌,우 슬라이드 버튼 -->
-								<div class="slide-control">
+								<div class="slide-control" id="slide-control3">
 									<div class="control01">
-										<label for="slide29" class="left"></label> <label
-											for="slide21" class="right"></label>
+										<label for="slide29" class="left"></label>
+										<label for="slide21" class="right"></label>
 									</div>
 									<div class="control02">
-										<label for="slide20" class="left"></label> <label
-											for="slide22" class="right"></label>
+										<label for="slide20" class="left"></label>
+										<label for="slide22" class="right"></label>
 									</div>
 									<div class="control03">
-										<label for="slide21" class="left"></label> <label
-											for="slide23" class="right"></label>
+										<label for="slide21" class="left"></label>
+										<label for="slide23" class="right"></label>
 									</div>
 									<div class="control04">
-										<label for="slide22" class="left"></label> <label
-											for="slide24" class="right"></label>
+										<label for="slide22" class="left"></label>
+										<label for="slide24" class="right"></label>
 									</div>
 									<div class="control05">
-										<label for="slide23" class="left"></label> <label
-											for="slide25" class="right"></label>
+										<label for="slide23" class="left"></label>
+										<label for="slide25" class="right"></label>
 									</div>
 									<div class="control06">
-										<label for="slide24" class="left"></label> <label
-											for="slide26" class="right"></label>
+										<label for="slide24" class="left"></label>
+										<label for="slide26" class="right"></label>
 									</div>
 									<div class="control07">
-										<label for="slide25" class="left"></label> <label
-											for="slide27" class="right"></label>
+										<label for="slide25" class="left"></label>
+										<label for="slide27" class="right"></label>
 									</div>
 									<div class="control08">
-										<label for="slide26" class="left"></label> <label
-											for="slide28" class="right"></label>
+										<label for="slide26" class="left"></label>
+										<label for="slide28" class="right"></label>
 									</div>
 									<div class="control09">
-										<label for="slide27" class="left"></label> <label
-											for="slide29" class="right"></label>
+										<label for="slide27" class="left"></label>
+										<label for="slide29" class="right"></label>
 									</div>
 									<div class="control010">
-										<label for="slide28" class="left"></label> <label
-											for="slide20" class="right"></label>
+										<label for="slide28" class="left"></label>
+										<label for="slide20" class="right"></label>
 									</div>
+								</div>
 							</ul>
 							<!-- 페이징 -->
-							<ul class="slide-pagelist">
+							<ul class="slide-pagelist" id="slide-pagelist3">
 								<li><label for="slide20"></label></li>
 								<li><label for="slide21"></label></li>
 								<li><label for="slide22"></label></li>
@@ -416,7 +413,8 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			
+
+
 		</footer>
 
 	</div>

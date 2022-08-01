@@ -148,7 +148,7 @@
 						//요청-응답 성공
 						success : function(data){ // 서버에서 받아오는 변수를 data라는 변수라고 명명?하는 듯?
 							if(data=='true'){//data가 true -> 사용할 수 없는 아이디
-								$('#resultCheck').text('😥사용할 수 없는 아이디입니다😥')
+								$('#resultCheck').text('😰사용할 수 없는 아이디입니다😰')
 							}else{//data가 false -> 사용할 수 있는 아이디
 								$('#resultCheck').text('😊사용할 수 있는 아이디입니다😊')
 							}
