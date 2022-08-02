@@ -72,11 +72,11 @@
            </div>
            <div class="join_pw">
                <h4>Password</h4>
-               <input type="password" name="mem_pw" id="mem_pw" placeholder="Password">
+               <input type="password" name="mem_pw" id="mem_pw" placeholder="Password" onchange="check_pw()">
            </div>
            <div class="join_pw">
                <h4>Password Confirm</h4>
-               <input type="password" name="" id="" placeholder="Password">
+               <input type="password" name="" id="Password Check" placeholder="Password Check" onchange="check_pw()">&nbsp;<span id="check"></span>
            </div>
            <div class="join_name">
                <h4>Nickname</h4>
@@ -178,6 +178,22 @@
 				}
 			</script>
 			
+			<script>
+				
+			   function check_pw(){
+				   if(document.getElementById('mem_pw').value !='' && document.getElementById('Password Check').value!=''){
+		                if(document.getElementById('mem_pw').value==document.getElementById('Password Check').value){
+		                    document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+		                    document.getElementById('check').style.color='blue';
+		                }
+		                else{
+		                    document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+		                    document.getElementById('check').style.color='red';
+		                }
+		            }
+			   }
+			
+			</script>
 
 
 </body>
