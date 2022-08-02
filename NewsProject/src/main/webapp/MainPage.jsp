@@ -83,7 +83,32 @@
 		}
 	}
 </script>
-</head>
+
+<style>
+h1#typing-txt{
+position: relative;
+display: inline-block;
+overflow: hidden;
+/* height: 25px; */
+/*  animation-delay : -5s; */
+animation : typingAni 3.5s steps(300,end) 1; 
+}
+h1#typing-txt::after{
+position: absolute; 
+display: block;
+content: "";
+/* animation : cursor 4s step-end infinite; */
+}
+@keyframes typingAni {
+0%{width:0%}
+100%{width: 500px};
+}
+/* @keyframes cursor{
+0%{opacity:0;}
+50%{opacity:1;}
+100%{opacity:0;}
+} */
+</style>
 
 </head>
 <body class="is-preload">
@@ -124,10 +149,11 @@
 			<header id="header" class="alt">
 							<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
 							<%
-							if(loginMember!=null){%>
+								if(loginMember!=null){%>
 								<h1 class=hh2><%=loginMember.getMem_id() %>님과 함께 할 뉴스</h1>
-							 <%} else {%>
-							<h1 class="hh2" style="color: #DAE5FE">WELCOME</h1>
+								<%} else {%>
+								<h1 class="hh2" id="typing-txt" style="color: #DAE5FE">WELCOME</h1>
+								<!-- <h1 id="typing"></h1> -->
 							<%} %>
 			<!-- 검색창 -->
 			<form action="http://127.0.0.1:5000" method="get"
