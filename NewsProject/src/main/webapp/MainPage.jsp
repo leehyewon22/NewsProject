@@ -1,3 +1,6 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.CategoryDAO"%>
+<%@page import="com.smhrd.model.Category"%>
 <%@page import="com.smhrd.model.ShortDAO"%>
 <%@page import="com.smhrd.model.Short"%>
 <%@page import="java.util.List"%>
@@ -112,18 +115,49 @@ content: "";
 
 </head>
 <body class="is-preload">
+	
 	<%
 	//session 값 가지고 오기
 	Member loginMember = (Member)session.getAttribute("loginMember");
+
+	
 	// 메인페이지에서 세션이 필요한 것들??
 			
-			List<Short> list = null;
-				
-					ShortDAO dao = new ShortDAO();
-					list = dao.selectAllshorts();
-					System.out.print(list.size());
-					
-	%>
+	List<Short> list1 = null;
+	List<Short> list2 = null;
+	List<Short> list3 = null;
+	String cateName1 = ""; 
+	String cateName2 = ""; 
+	String cateName3 = ""; 
+		
+	if(loginMember!=null){
+		
+		ShortDAO dao1 = new ShortDAO();
+		ShortDAO dao2 = new ShortDAO();
+		ShortDAO dao3 = new ShortDAO();
+		
+		list1 = dao1.selectAllshorts(loginMember.getCat_seq());
+		list2 = dao2.selectAllshorts(loginMember.getCat_seq2());
+		list3 = dao3.selectAllshorts(loginMember.getCat_seq3());
+		
+		
+		CategoryDAO cdao1 = new CategoryDAO();
+		CategoryDAO cdao2 = new CategoryDAO();
+		CategoryDAO cdao3 = new CategoryDAO();
+		
+		cateName1 = cdao1.selectCateName(loginMember.getCat_seq());
+ 		cateName2 = cdao2.selectCateName(loginMember.getCat_seq2());
+		cateName3 = cdao3.selectCateName(loginMember.getCat_seq3()); 
+	}
+	
+		
+		/* System.out.println(loginMember.getCat_seq());
+ 		System.out.println(loginMember.getCat_seq2());
+		System.out.println(loginMember.getCat_seq3());  */
+		
+			
+	 %>
+	
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -175,9 +209,13 @@ content: "";
 		<nav id="nav">
 			<ul>
 				<li><a href="#intro" class="active">RealTime Keyword</a></li>
-				<li><a href="#first">First category</a></li>
-				<li><a href="#second">Second category</a></li>
-				<li><a href="#cta">Third category</a></li>
+				
+				<%if(loginMember!=null){ %>
+				<li><a href="#first"><%=cateName1 %></a></li>
+				<li><a href="#second"><%=cateName2 %></a></li>
+				<li><a href="#cta"><%=cateName3 %></a></li>
+				<%} %>
+				
 			</ul>
 		</nav>
 
@@ -192,11 +230,11 @@ content: "";
 					<img src="images/pic01.jpg" class="spotlightimg">
 				</div>
 			</section>
-
+<%if(loginMember!=null){ %>
 			<!-- First Section -->
 			<section id="first" class="main special">
 				<header class="major">
-					<h2 class="hh2">First Category</h2>
+					<h2 class="hh2"><%=cateName1 %></h2>
 				</header>
 				<form action="#" method="post">
 					<div class="section" id="section1">
@@ -212,7 +250,7 @@ content: "";
 							<ul class="slidelist s1" id="slidelist1">
 								<!-- 슬라이드 영역 -->
 								<%	int i=0;
-									for(Short s:list){
+									for(Short s:list1){
 										i++;%>
 										<li class="slideitem" id="slideitem<%=i-1 %>">
 										<a>
@@ -318,7 +356,7 @@ content: "";
 			<!-- Second Category -->
 			<section id="second" class="main special">
 				<header class="major">
-					<h2 class="hh2">Second Category</h2>
+					<h2 class="hh2"><%=cateName2 %></h2>
 				</header>
 				<form action="#" method="post">
 
@@ -335,7 +373,32 @@ content: "";
 
 							<ul class="slidelist" id="slidelist2">
 								<!-- 슬라이드 영역 -->
-								<script>
+								<%	
+									i=0;
+									for(Short s:list2){
+										i++;%>
+										<li class="slideitem" id="slideitem<%=i-1 %>">
+										<a>
+										<div class="textbox">
+										<h3 class="htag"><%=s.getNews_title()%></h3>
+										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
+										<footer class="footer1">
+											<div class="btnContainer1">
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											</div>
+										</footer>
+										</div>
+										<img src="images/bg/pic_2.jpg">
+										</a>
+										</li>
+									<%} %>
+								<!-- <script>
 									for (let i = 0; i < 10; i++) {
 										document.write('<li class="slideitem" id="slideitem1"'+i+'>');
 										document.write('<a>');
@@ -347,7 +410,7 @@ content: "";
 										document.write('</a>');
 										document.write('</li>');
 									}
-								</script>
+								</script> -->
 
 								<!-- 좌,우 슬라이드 버튼 -->
 								<div class="slide-control" id="slide-control2">
@@ -417,7 +480,7 @@ content: "";
 			<!--Third Category -->
 			<section id="cta" class="main special">
 				<header class="major">
-					<h2 class="hh2">Third Category</h2>
+					<h2 class="hh2"><%=cateName3 %></h2>
 				<form action="#" method="post">
 
 					<div class="section" id="section3">
@@ -432,7 +495,32 @@ content: "";
 
 							<ul class="slidelist" id="slidelist3">
 								<!-- 슬라이드 영역 -->
-								<script>
+								<%	
+									i=0;
+									for(Short s:list3){
+										i++;%>
+										<li class="slideitem" id="slideitem<%=i-1 %>">
+										<a>
+										<div class="textbox">
+										<h3 class="htag"><%=s.getNews_title()%></h3>
+										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
+										<footer class="footer1">
+											<div class="btnContainer1">
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="#section1" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											</div>
+										</footer>
+										</div>
+										<img src="images/bg/pic_5.jpg">
+										</a>
+										</li>
+								<%} %>
+								<!-- <script>
 									for (let i = 0; i < 10; i++) {
 										document.write('<li class="slideitem">');
 										document.write('<a>');
@@ -444,7 +532,7 @@ content: "";
 										document.write('</a>');
 										document.write('</li>');
 									}
-								</script>
+								</script> -->
 
 								<!-- 좌,우 슬라이드 버튼 -->
 								<div class="slide-control" id="slide-control3">
@@ -512,7 +600,7 @@ content: "";
 			</section>
 
 		</div>
-
+<%} %>
 		<!-- Footer -->
 		<footer id="footer">
 

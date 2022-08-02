@@ -6,9 +6,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.ShortDAO">
 	
 	
-	<select id="selectAllshorts" parameterType="String" resultType="com.smhrd.model.Short">
+	<select id="selectAllshorts" parameterType="BigDecimal" resultType="com.smhrd.model.Short">
 	
-		select * from shortnews_info
+		select * from shortnews_info where cat_seq=#{cat_seq}
 	
 	</select>
 
