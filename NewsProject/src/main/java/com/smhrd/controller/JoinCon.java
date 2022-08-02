@@ -81,6 +81,7 @@ public class JoinCon extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
 			request.setAttribute("joinid",id); // (보낼거에대한이름, 보낼값)
 			rd.forward(request, response);
+			
 		}else {
 			System.out.println("회원가입실패");
 			//포워딩

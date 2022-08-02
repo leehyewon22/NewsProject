@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
@@ -142,14 +143,13 @@
 			
 			</div>
            </div>
-
            <div class="submit">
-               <input type="submit" value="submit">
+               <input type="submit" value="submit" onclick="ThanksMan()">
            </div>
        </div>
    </div>
 	</form>
-
+			
 
 			<script>
 				function checkE(){
@@ -192,8 +192,17 @@
 		                }
 		            }
 			   }
-			
 			</script>
+		
+			
+			<script>
+				function ThanksMan(){
+					alert("🎉회원가입을 축하합니다!🎉 \n 로그인 페이지로 이동하겠습니다-!");
+					$("form").submit();
+				}
+			</script>
+			
+			
 
 
 </body>
