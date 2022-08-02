@@ -86,7 +86,7 @@
            
            
            <div class="join_cate">
-               <h4>Category</h4> 
+               <h4>Category(3개 선택)</h4> 
                <div class="wrapper">
 			
 			  <div class="container">
