@@ -184,7 +184,7 @@ content: "";
 							<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
 							<%
 								if(loginMember!=null){%>
-								<h1 class=hh2><%=loginMember.getMem_id() %>님과 함께 할 뉴스</h1>
+								<h1 class=hh2><%=loginMember.getMem_name() %>님과 함께 할 뉴스</h1>
 								<%} else {%>
 								<h1 class="hh2" id="typing-txt" style="color: #DAE5FE">WELCOME</h1>
 								<!-- <h1 id="typing"></h1> -->
