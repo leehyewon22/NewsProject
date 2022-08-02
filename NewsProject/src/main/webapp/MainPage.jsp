@@ -121,9 +121,14 @@
 		</div>
 
 		<!-- Header -->
-		<header id="header" class="alt">
-			<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
-			<h1 class="hh2">'닉네임'님과 함께 할 뉴스</h1>
+			<header id="header" class="alt">
+							<span class="logo"><img src="images/NEWSLOGO2.png" alt="" /></span>
+							<%
+							if(loginMember!=null){%>
+								<h1 class=hh2><%=loginMember.getMem_id() %>님과 함께 할 뉴스</h1>
+							 <%} else {%>
+							<h1 class="hh2" style="color: #DAE5FE">WELCOME</h1>
+							<%} %>
 			<!-- 검색창 -->
 			<form action="http://127.0.0.1:5000" method="get"
 				class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1" style="background: white;border-radius: 10px;">
