@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.ShortDAO"%>
+<%@page import="com.smhrd.model.Short"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -86,8 +89,15 @@
 <body class="is-preload">
 	<%
 	//session 값 가지고 오기
-	Member loginMember = (Member) session.getAttribute("loginMember");
+	Member loginMember = (Member)session.getAttribute("loginMember");
 	// 메인페이지에서 세션이 필요한 것들??
+			
+			List<Short> list = null;
+				
+					ShortDAO dao = new ShortDAO();
+					list = dao.selectAllshorts();
+					System.out.print(list.size());
+					
 	%>
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -155,7 +165,7 @@
 			<!-- First Section -->
 			<section id="first" class="main special">
 				<header class="major">
-					<h2>First Category</h2>
+					<h2 class="hh2">First Category</h2>
 				</header>
 				<form action="#" method="post">
 					<div class="section" id="section1">
@@ -170,7 +180,31 @@
 
 							<ul class="slidelist s1" id="slidelist1">
 								<!-- 슬라이드 영역 -->
-								<script>
+								<%	int i=0;
+									for(Short s:list){
+										i++;%>
+										<li class="slideitem" id="slideitem<%=i-1 %>">
+										<a>
+										<div class="textbox">
+										<h3 class="htag"><%=s.getNews_title()%></h3>
+										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
+										<footer class="footer1">
+											<div class="btnContainer1">
+											    <a href="https://www.naver.com/" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											</div>
+										</footer>
+										</div>
+										<img src="images/bg/pic_0.jpg">
+										</a>
+										</li>
+								<%} %>
+								<!-- <script>
 									for (let i = 0; i < 10; i++) {
 										document.write('<li class="slideitem" id="slideitem'+i+'">');
 										document.write('<a>');
@@ -182,7 +216,7 @@
 										document.write('</a>');
 										document.write('</li>');
 									}
-								</script>
+								</script> -->
 
 								<!-- 좌,우 슬라이드 버튼 -->
 								<div class="slide-control" id="slide-control1">
