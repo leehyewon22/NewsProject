@@ -81,19 +81,18 @@
 	
 	<% if(loginMember==null){%>
 			<script>
-			
 		     $(document).on('click','#sub',()=>{
 		    	 alert('😵로그인 실패하셨습니다.😵')
 		       })
 			</script>
 		<%}%>
-		<% if(loginMember!=null){%>
-		<script>
-				$(document).on('click','#sub',()=>{
+	<% if(loginMember!=null){%>
+			<script>
+			$(document).on('click','#sub',()=>{
 				    	 alert('🥳로그인 성공하셨습니다.🥳')
-				      })
-		</script>
-		<% }%>
+				 })
+			</script>
+	<% }%>
 
 
 	<div class="wrap">
