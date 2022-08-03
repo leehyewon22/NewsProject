@@ -35,10 +35,40 @@
 			top: -30px;
 			left:190px;
 		}
+		.forgot_pw{
+			padding: 10px;
+		    width: 80%;
+		    font-size: 14px;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    font-weight: bold;
+		}
 		
+		#pp{
+			width: 80%;
+			height:8px;
+			font-size: 12px;
+			margin-left: 380px;
+			font-weight: bold;
+			
+		}
 		
 	</style>
 	
+	<script>
+
+		$(document).on('click','#forgot',()=>{
+			$('#pp').text('😜왕바보😜');
+			$('#forgot').text('Forgot Password?');
+			$('#forgot').attr("id","aa");
+		});
+		$(document).on('click','#aa',()=>{
+			$('#pp').text(' ');
+			$('#aa').attr("id","forgot");
+		});
+	
+	</script>
 	
 </head>
 <body>
@@ -59,10 +89,13 @@
                 <div class="checkbox">
                 <input type="checkbox" name="" id=""> Remember Me?
                 </div>
-                <div class="forgot_pw">
-                <a href="">Forgot Password?</a>
+                <a href="#" id="forgot">Forgot Password?</a>
             </div>
-            </div>
+    
+			<div id="pp"> 
+			</div>
+            
+            
             <div class="submit">
                 <a href="MainPage.jsp"><input type="submit" value="submit" style="float: right;"></a>
 	            <button type="button" style="float: right;" onclick="location.href='Join.jsp'">sign up</button>
