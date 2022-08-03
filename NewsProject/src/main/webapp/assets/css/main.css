@@ -3,28 +3,30 @@
 @import url("fontawesome-all.min.css");
 
 /* 버튼 */
+.btnContainer1{background: black;}
 .btnFade1, .btnFade1:visited {font-size: 18px; text-decoration: none;}
 .btnContainer1 > .btnFade1 .keyword1{margin-left: 500px;}
-.btnContainer1 > .btnFade1 .link{margin-left: 50px; background:gray; color:white;}
+.btnContainer1 > #linkBtn{margin-left:  30px; background:rgba(128, 128, 128, 0.678); color:white;}
 .btnFade1 {display: block; position: relative; float: left; width: 120px;
 padding: 0; margin: 10px 25px 10px 0; font-weight: 600; text-align: center;  line-height: 50px;
   color: cornflowerblue; border-radius: 10px; transition: all 0.2s ;  background: white;}
-.btnFade1:hover { background: rgba(128, 128, 128, 0.678); color: white !important;}
+.btnFade1:hover { background: white; color: cornflowerblue;}
+/* .btnFade1:hover { background: rgba(128, 128, 128, 0.678); color: white;} */
 .footer1 > .btnContainer1 { width: 900px; margin:auto; height: 70px; opacity:1;    top: 30px;}
 .footer1 > div{align-content: center;}
 
-/* 본문요약 */
-.short{background:red;opacity:1; width:900px; height:250px; margin-top: 50px; white-space:normal;}
-.ptag1{ color:black; }
+/* 뉴스 본문 */
+.short{opacity:1; width:900px; height:250px; margin-top: 10px; white-space:normal; overflow: auto;}
+.short::-webkit-scrollbar{width: 5px;}
+.short::-webkit-scrollbar-thumb{background-color: white;}
+.short::-webkit-scrollbar-track{background-color: none;}
+#hhID{margin-top:10px;}
+
 
 /* 슬라이드 이미지 크기 변경 */
-.slideitem img{width: 100%; height: 500px;border-radius: 40px;}
+.slideitem img{width: 96%; height: 500px; border-radius: 40px;  margin: 0 5px 0 5px;}
 
-
-/* .slideitem img{width: 600px;height: 500px;border-radius: 40px;} */
-/* .slideitem img{width: 600px;height: 500px;border-radius: 40px 40px 40px 40px ;}
- */
-
+ 
  
 /*------------------------------------------------------------------------------------------------------------*/
 
@@ -41,14 +43,16 @@ padding: 0; margin: 10px 25px 10px 0; font-weight: 600; text-align: center;  lin
 .section .slidelist .textbox p {font-size:21px;z-index:20;color:black;opacity:0;transform:translateY(30px);transition:all .5s;}
  */
  .section .slidelist .textbox {position:absolute;z-index:10;top:45%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
-.section .slidelist .textbox h3 {font-size:36px;z-index:20;color:black;;transform:translateY(30px);transition:all .5s;}
-.section .slidelist .textbox p {font-size:21px;z-index:20;color:#fff;opacity:1;transform:translateY(30px);transition:all .5s;white-space:normal;}
-/* 
-.section .slidelist .textbox {position:absolute;z-index:10;top:25%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
-.section .slidelist .textbox h3 {font-size:36px;z-index:20;color:black;transform:translateY(30px);transition:all .5s;}
-.section .slidelist .textbox p {font-size:21px;z-index:20;color:black;opacity:1;transform:translateY(30px);transition:all .5s;}
-  */
- 
+.section .slidelist .textbox .h1 {width: 900px;height: 40px;font-size:30px;z-index:20;color:black;transition:all .5s;}
+.section .slidelist .textbox .h2 {width: 900px;height: 40px;font-size:30px;z-index:20;color:black;transition:all .5s;}
+.section .slidelist .textbox .h3 {width: 900px;height: 40px;font-size:30px;z-index:20;color:black;transition:all .5s;}
+.section .slidelist .textbox .pp1 {font-size:20px;z-index:20;color:black;opacity:1;transition:all .5s;white-space:normal;
+letter-spacing: 0px;word-spacing: 5px; margin-top:5px; margin-bottom:20px;}
+.section .slidelist .textbox .pp2 {font-size:20px;z-index:20;color:black;opacity:1;transition:all .5s;white-space:normal;
+letter-spacing: 0px;word-spacing: 5px; margin-top:5px; margin-bottom:20px;}
+.section .slidelist .textbox .pp3 {font-size:20px;z-index:20;color:black;opacity:1;transition:all .5s;white-space:normal;
+letter-spacing: 0px;word-spacing: 5px; margin-top:5px; margin-bottom:20px;}
+
 /*------------------------------------------------------------------------------------------------------------*/
 
 /* input에 체크되면 슬라이드 효과 */

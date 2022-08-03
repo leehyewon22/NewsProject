@@ -140,11 +140,6 @@ content: "";
 		cateName3 = cdao3.selectCateName(loginMember.getCat_seq3()); 
 	}
 	
-		
-		/* System.out.println(loginMember.getCat_seq());
- 		System.out.println(loginMember.getCat_seq2());
-		System.out.println(loginMember.getCat_seq3());  */
-		
 			
 	 %>
 	
@@ -246,16 +241,16 @@ content: "";
 										<a>
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
-										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<div class="short"><p class="pp1" id="ptag1"><%=s.getNews_short() %></p></div>
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
-											    <a href="https://www.naver.com/" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
-											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
 										</div>
@@ -371,36 +366,23 @@ content: "";
 										<a>
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
-										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<div class="short"><p class="pp2" id="ptag1"><%=s.getNews_short() %></p></div>
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
-											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
 										</div>
-										<img src="images/bg/pic_2.jpg">
+										<img src="images/bg/pic_0.jpg">
 										</a>
 										</li>
 									<%} %>
-								<!-- <script>
-									for (let i = 0; i < 10; i++) {
-										document.write('<li class="slideitem" id="slideitem1"'+i+'>');
-										document.write('<a>');
-										document.write('<div class="textbox">');
-										document.write('<h3 class="htag">1' + i+ '번째 슬라이드</h3>');
-										document.write('<p class="ptag">1' + i+ '번째 슬라이드 입니다.</p>');
-										document.write('</div>');
-										document.write('<img src="images/bg/pic_'+i+'.jpg">');
-										document.write('</a>');
-										document.write('</li>');
-									}
-								</script> -->
 
 								<!-- 좌,우 슬라이드 버튼 -->
 								<div class="slide-control" id="slide-control2">
@@ -493,37 +475,23 @@ content: "";
 										<a>
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
-										<div class="short"><p id="ptag1"><%=s.getNews_short() %></p></div>
+										<div class="short"><p class="pp3" id="ptag1"><%=s.getNews_short() %></p></div>
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
-											    <a href="#section1" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
-											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link">원문보기</a>
+											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
 										</div>
-										<img src="images/bg/pic_5.jpg">
+										<img src="images/bg/pic_0.jpg">
 										</a>
 										</li>
 								<%} %>
-								<!-- <script>
-									for (let i = 0; i < 10; i++) {
-										document.write('<li class="slideitem">');
-										document.write('<a>');
-										document.write('<div class="textbox">');
-										document.write('<h3 class="htag">2' + i+ '번째 슬라이드</h3>');
-										document.write('<p class="ptag">2' + i+ '번째 슬라이드 입니다.</p>');
-										document.write('</div>');
-										document.write('<img src="images/bg/pic_'+i+'.jpg">');
-										document.write('</a>');
-										document.write('</li>');
-									}
-								</script> -->
-
 								<!-- 좌,우 슬라이드 버튼 -->
 								<div class="slide-control" id="slide-control3">
 									<div class="control01">
