@@ -52,16 +52,10 @@
 							font-family: 'Noto Sans KR', sans-serif;
 						}
 					
-					
 						.ptag{
 							font-family: 'Noto Sans KR', sans-serif;
 						}
 						
-						/* 
-						.logo2{
-							font-family: 'Jua', sans-serif;
-
-						} */
 						.hh2 {
 							font-family: 'Jua', sans-serif;
 						}
@@ -106,11 +100,7 @@ content: "";
 0%{width:0%}
 100%{width: 500px};
 }
-/* @keyframes cursor{
-0%{opacity:0;}
-50%{opacity:1;}
-100%{opacity:0;}
-} */
+
 </style>
 
 </head>
@@ -190,7 +180,7 @@ content: "";
 								<!-- <h1 id="typing"></h1> -->
 							<%} %>
 			<!-- 검색창 -->
-			<form action="http://127.0.0.1:5000" method="get"
+			<form action="http://127.0.0.1:5000/" method="get"
 				class="u-border-1 u-border-grey-15 u-search u-search-right u-search-1" style="background: white;border-radius: 10px;">
 				<button class="u-search-button" type="submit">
 					<div
