@@ -239,13 +239,14 @@ content: "";
 									for(Short s:list1){
 										i++;%>
 										<li class="slideitem" id="slideitem<%=i-1 %>">
-										<a>
+										
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
 										<div class="short"><p class="pp1" id="ptag1"><%=s.getNews_short() %></p></div>
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
+																					
 											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
 											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
@@ -256,7 +257,7 @@ content: "";
 										</footer>
 										</div>
 										<img src="images/bg/pic_0.jpg">
-										</a>
+										
 										</li>
 								<%} %>
 								<!-- <script>
@@ -364,7 +365,7 @@ content: "";
 									for(Short s:list2){
 										i++;%>
 										<li class="slideitem" id="slideitem<%=i-1 %>">
-										<a>
+										
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
 										<div class="short"><p class="pp2" id="ptag1"><%=s.getNews_short() %></p></div>
@@ -381,7 +382,7 @@ content: "";
 										</footer>
 										</div>
 										<img src="images/bg/pic_0.jpg">
-										</a>
+										
 										</li>
 									<%} %>
 
@@ -473,7 +474,7 @@ content: "";
 									for(Short s:list3){
 										i++;%>
 										<li class="slideitem" id="slideitem<%=i-1 %>">
-										<a>
+										
 										<div class="textbox">
 										<h3 class="htag"><%=s.getNews_title()%></h3>
 										<div class="short"><p class="pp3" id="ptag1"><%=s.getNews_short() %></p></div>
@@ -490,7 +491,7 @@ content: "";
 										</footer>
 										</div>
 										<img src="images/bg/pic_0.jpg">
-										</a>
+										
 										</li>
 								<%} %>
 								<!-- 좌,우 슬라이드 버튼 -->

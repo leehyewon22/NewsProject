@@ -3,7 +3,7 @@
 @import url("fontawesome-all.min.css");
 
 /* 버튼 */
-/* .btnContainer1{background: black;} */
+
 .btnFade1, .btnFade1:visited {font-size: 18px; text-decoration: none;}
 .btnContainer1 > .btnFade1 .keyword1{margin-left: 500px;}
 .btnContainer1 > #linkBtn{margin-left:  30px; margin-right:0; background:rgba(128, 128, 128, 0.678); color:white;}
@@ -3273,8 +3273,8 @@ input, select, textarea {
 			 width: 80%;margin-left: 100px;
 		}
 		.spotlightimg{
-			width: 100%;
-			height: 600px;
+			width: 100%;height: 480px;
+			
 		}
 
 			.spotlight .content > :last-child {
