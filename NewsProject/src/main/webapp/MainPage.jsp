@@ -212,7 +212,8 @@ content: "";
 					<h2 class="hh2">RealTime Keyword</h2>
 				</header>
 				<div class="spotlight">
-					<img src="images/pic01.jpg" class="spotlightimg">
+					<!-- <img src="images/pic01.jpg" class="spotlightimg"> -->
+					<div class="spotlightimg"><img src="images/워드클라우드3.png" class="wordcloudimg"></div>
 				</div>
 			</section>
 <%if(loginMember!=null){ %>

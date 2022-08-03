@@ -3,12 +3,12 @@
 @import url("fontawesome-all.min.css");
 
 /* 버튼 */
-.btnContainer1{background: black;}
+/* .btnContainer1{background: black;} */
 .btnFade1, .btnFade1:visited {font-size: 18px; text-decoration: none;}
 .btnContainer1 > .btnFade1 .keyword1{margin-left: 500px;}
-.btnContainer1 > #linkBtn{margin-left:  30px; background:rgba(128, 128, 128, 0.678); color:white;}
+.btnContainer1 > #linkBtn{margin-left:  30px; margin-right:0; background:rgba(128, 128, 128, 0.678); color:white;}
 .btnFade1 {display: block; position: relative; float: left; width: 120px;
-padding: 0; margin: 10px 25px 10px 0; font-weight: 600; text-align: center;  line-height: 50px;
+padding: 0; margin: 10px 30px 10px 0; font-weight: 600; text-align: center;  line-height: 50px;
   color: cornflowerblue; border-radius: 10px; transition: all 0.2s ;  background: white;}
 .btnFade1:hover { background: white; color: cornflowerblue;}
 /* .btnFade1:hover { background: rgba(128, 128, 128, 0.678); color: white;} */
@@ -3269,7 +3269,9 @@ input, select, textarea {
 			-ms-flex: 1;
 			flex: 1;
 		}
-		
+		.wordcloudimg{
+			 width: 80%;margin-left: 100px;
+		}
 		.spotlightimg{
 			width: 100%;
 			height: 600px;
