@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -73,6 +74,28 @@
 </head>
 <body>
 
+<%
+		Member loginMember = (Member)session.getAttribute("loginMember");
+		
+	%>
+	
+	<% if(loginMember==null){%>
+			<script>
+			
+		     $(document).on('click','#sub',()=>{
+		    	 alert('😵로그인 실패하셨습니다.😵')
+		       })
+			</script>
+		<%}%>
+		<% if(loginMember!=null){%>
+		<script>
+				$(document).on('click','#sub',()=>{
+				    	 alert('🥳로그인 성공하셨습니다.🥳')
+				      })
+		</script>
+		<% }%>
+
+
 	<div class="wrap">
         <div class="login">
 	<form action="LoginCon" method="post" id="login_form">
@@ -97,7 +120,7 @@
             
             
             <div class="submit">
-                <a href="MainPage.jsp"><input type="submit" value="submit" style="float: right;"></a>
+                <a href="MainPage.jsp"><input type="submit" value="submit" style="float: right;" id="sub"></a>
 	            <button type="button" style="float: right;" onclick="location.href='Join.jsp'">sign up</button>
             </div>
             
