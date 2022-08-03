@@ -10,7 +10,7 @@
 .btnFade1 {display: block; position: relative; float: left; width: 120px;
 padding: 0; margin: 10px 30px 10px 0; font-weight: 600; text-align: center;  line-height: 50px;
   color: cornflowerblue; border-radius: 10px; transition: all 0.2s ;  background: white;}
-.btnFade1:hover { background: white; color: cornflowerblue;}
+.btnFade1:hover { background: white; color: cornflowerblue; text-decoration: none;}
 /* .btnFade1:hover { background: rgba(128, 128, 128, 0.678); color: white;} */
 .footer1 > .btnContainer1 { width: 900px; margin:auto; height: 70px; opacity:1;    top: 30px;}
 .footer1 > div{align-content: center;}

@@ -256,7 +256,7 @@ content: "";
 											</div>
 										</footer>
 										</div>
-										<img src="images/bg/pic_0.jpg">
+										<img src="images/bg/back.png">
 										
 										</li>
 								<%} %>
@@ -381,7 +381,7 @@ content: "";
 											</div>
 										</footer>
 										</div>
-										<img src="images/bg/pic_0.jpg">
+										<img src="images/bg/back.png">
 										
 										</li>
 									<%} %>
@@ -490,7 +490,7 @@ content: "";
 											</div>
 										</footer>
 										</div>
-										<img src="images/bg/pic_0.jpg">
+										<img src="images/bg/back.png">
 										
 										</li>
 								<%} %>
