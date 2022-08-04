@@ -213,7 +213,7 @@ content: "";
 				</header>
 				<div class="spotlight">
 					<!-- <img src="images/pic01.jpg" class="spotlightimg"> -->
-					<div class="spotlightimg"><img src="images/워드클라우드3.png" class="wordcloudimg"></div>
+					<div class="spotlightimg"><img src="images/워드클라우드3.png" class="wordcloudimg" style="width: 900px; height: 500px;margin-left: 150px;"></div>
 				</div>
 			</section>
 <%if(loginMember!=null){ %>
@@ -247,11 +247,11 @@ content: "";
 										<footer class="footer1">
 											<div class="btnContainer1">
 																					
-											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword1() %>" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword2() %>" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword3() %>" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword4() %>" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword5() %>" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
 											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
@@ -372,11 +372,11 @@ content: "";
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
-											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword1() %>" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword2() %>" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword3() %>" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword4() %>" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword5() %>" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
 											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
@@ -481,11 +481,11 @@ content: "";
 										<!-- 카테고리 바뀔 때마다 footer, div, btnFade(a) - class 변경하기 꼬옥 -->
 										<footer class="footer1">
 											<div class="btnContainer1">
-											    <a href="" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
-											    <a href="" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword1() %>" title="Button fade" class="btnFade1 keyword1"># <%=s.getKeyword1() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword2() %>" title="Button fade" class="btnFade1 keyword2"># <%=s.getKeyword2() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword3() %>" title="Button fade" class="btnFade1 keyword3"># <%=s.getKeyword3() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword4() %>" title="Button fade" class="btnFade1 keyword4"># <%=s.getKeyword4() %></a>
+											    <a href="https://search.naver.com/search.naver?where=news&sm=tab_jum&query=<%=s.getKeyword5() %>" title="Button fade" class="btnFade1 keyword5"># <%=s.getKeyword5() %></a>
 											    <a href="<%=s.getNews_link() %>" title="Button fade" class="btnFade1 link" id="linkBtn">원문보기</a>
 											</div>
 										</footer>
