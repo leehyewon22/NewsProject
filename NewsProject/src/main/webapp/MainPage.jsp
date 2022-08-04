@@ -193,7 +193,7 @@ content: "";
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-				<li><a href="#intro" class="active">RealTime Keyword</a></li>
+				<li><a href="#intro" class="active">Ranking Keyword</a></li>
 				
 				<%if(loginMember!=null){ %>
 				<li><a href="#first"><%=cateName1 %></a></li>
@@ -209,7 +209,7 @@ content: "";
 
 			<section id="intro" class="main">
 				<header class="major">
-					<h2 class="hh2">RealTime Keyword</h2>
+					<h2 class="hh2">Ranking Keyword</h2>
 				</header>
 				<div class="spotlight">
 					<!-- <img src="images/pic01.jpg" class="spotlightimg"> -->
