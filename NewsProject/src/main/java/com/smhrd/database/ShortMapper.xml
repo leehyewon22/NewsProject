@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="selectAllshorts" parameterType="BigDecimal" resultType="com.smhrd.model.Short">
 	
-		select * from shortnews_info where cat_seq=#{cat_seq}
+		select * from shortnews_info where cat_seq=#{cat_seq} order by short_seq desc
 	
 	</select>
 
